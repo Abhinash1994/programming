@@ -1,0 +1,621 @@
+import React, { Component } from 'react';
+import { Grid, Button } from '@material-ui/core';
+import {connect} from 'react-redux';
+import {initializeAppVar, initializeHomePageData} from '../../actions/actions';
+import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Radio from '@material-ui/core/Radio';
+import axios from 'axios';
+import ReactGA from 'react-ga';
+import SalonCardSlider from './SalonCardSlider';
+import { Link } from 'react-router-dom';
+import NumberFormat from 'react-number-format';
+import Slider from "react-slick";
+import ReactPixel from 'react-facebook-pixel';
+
+import SimpleMediaCard from '../Home/salonCards';
+
+const styles = theme => ({
+  root: {
+    width: '100%',
+  },
+
+  
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+});
+
+var isLoggedIn=true;
+var latitude = 28.636129;
+var longitude = 77.212702;
+var locationName = " ";
+class Subscription extends React.Component{
+
+
+
+  constructor(props) {
+    super(props);
+      this.props.initAppVar();
+      let lName = localStorage.getItem('LOCATION_NAME')
+      this.state = {
+        value: 0,
+        anchorEl: null,
+        subscription:{},
+        selectedValue: 'a',
+        showPayment:false,
+        isLoaded: false,
+        items: [],
+        amount:1699,
+        error: null,
+        coupon:"",
+        name : "",
+        phoneNumber : "",
+        nearbySalons : [],
+        locationName : lName
+      }; 
+  if (window.location.protocol === 'http:') {
+   window.location.href = "https://www.beusalons.com/subscription/"
+   }
+
+
+          this.buySubscription = this.buySubscription.bind(this);
+          this.applyCoupon = this.applyCoupon.bind(this);
+          this.handleChange2 = this.handleChange2.bind(this);
+          this.submitForm = this.submitForm.bind(this);
+            this.loadNearBySalons = this.loadNearBySalons.bind(this);
+            this.detectCurrentLocation = this.detectCurrentLocation.bind(this);
+          this.handleChangeCoupon = this.handleChangeCoupon.bind(this);
+          this.detectCurrentLocation();
+  }
+
+     
+     detectCurrentLocation(){
+          let instance = this;
+          // console.log("hrer");
+          
+          var startPos;
+          var geoSuccess = function(position) {
+            startPos = position;
+            localStorage.setItem('LATITUDE', JSON.stringify(startPos.coords.latitude));
+            localStorage.setItem('LONGITUDE', JSON.stringify(startPos.coords.longitude));
+            localStorage.setItem('LOCATION_NAME', "");
+            locationName = " ";
+            latitude = JSON.stringify(startPos.coords.latitude);
+            longitude = JSON.stringify(startPos.coords.longitude);
+            instance.props.initHomeData([], 1);
+            instance.loadNearBySalons()
+          };
+          var geoError = function(error) {
+            // console.log('Error occurred. Error code: ' + error);
+            latitude = 28.636129;
+            longitude = 77.212702;
+            locationName = " ";
+            instance.loadNearBySalons()
+
+            // error.code can be:
+            //   0: unknown error
+            //   1: permission denied
+            //   2: position unavailable (error response from location provider)
+            //   3: timed out
+          };
+          navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+    }
+
+    loadNearBySalons(){
+      latitude = localStorage.getItem('LATITUDE');
+      longitude = localStorage.getItem('LONGITUDE');
+      let instance = this;
+      // console.log("loading salons");
+          axios.get('https://www.beusalons.com/apiv2/homePageParlorList', {
+              params: {
+                latitude : parseFloat(latitude),
+                longitude : parseFloat(longitude),
+                page : 1,
+                affiliateParlor : true,
+                locationName :  locationName,
+              }
+            })
+            .then(function (response) {
+              // console.log("home data",response.data);
+              if(response.data.data.homeData.length > 0){
+                  instance.setState({ nearbySalons : response.data.data.homeData});
+                  if(locationName == " "){
+                      locationName = response.data.data.locationName;
+                  }
+                  instance.setState({locationName : locationName})
+                  localStorage.setItem('LOCATION_NAME', locationName);
+              }
+            })
+            .catch(function (error) {
+
+            });  
+    }
+
+    handleChange2 = name => event => {
+          // console.log("SDAdsadsa56456");
+        this.setState({
+          [name]: event.target.value,
+        });
+      };
+
+
+  handleChange = event => {
+    this.setState({ selectedValue: event.target.value });
+  };
+
+
+ submitForm(){
+      // console.log(this.state);
+      let instance = this;
+      axios.post("https://www.beusalons.com/api/newWebsiteQuery",
+          {
+              name : this.state.name,
+              phoneNumber : this.state.phoneNumber,
+          })
+          .then(function (response) {
+            alert('Form Submitted, We will get in touch with you shortly!');
+            instance.setState({name: "",phoneNumber: "",emailId: "", message : ""});
+          })
+          .catch(function (error) {
+            console.log("here");
+          });
+      
+  }
+  
+
+
+         handleChangeCoupon = name => event => {
+          // console.log("SDAdsadsa");
+        this.setState({
+          [name]: event.target.value,
+        });
+      };
+
+
+  componentDidMount() {
+    ReactPixel.pageView();  
+    var ins=this;
+    let lName = localStorage.getItem('LOCATION_NAME')
+    locationName = lName
+    this.setState({location : lName});
+    axios.get("https://www.beusalons.com/api/showSubscription")
+      .then(
+        (response) => {
+          ins.setState({
+            isLoaded: true,
+            items: response.data.data
+          });
+          // console.log(response)
+          // console.log("items state",this.state.items)
+        },
+        (error) => {
+          ins.setState({
+            isLoaded: true,
+            error
+          });
+        }
+        
+      )
+  }
+ 
+backBtn(){
+    isLoggedIn=true;
+  // console.log("this is click")
+}
+
+handleChange1 = number => event => {
+  this.setState({
+    [number]: event.target.value,
+  });
+};
+
+handleSubmit = event => {
+  event.preventDefault();
+
+  const user = {
+    name: this.state.name
+  };
+
+  axios.post(`https://jsonplaceholder.typicode.com/users`,{ user })
+    .then(res => {
+      // console.log(res);
+      // console.log(res.data);
+    })
+}
+buySubscription(sub){
+  ReactGA.event({
+      category: 'Buy Subscription',
+      action: 'Click',
+      label: 'Buy Subscription'
+    });
+    ReactPixel.track( 'InitiateCheckout', {
+      category: 'InitiateCheckout',
+      action: 'InitiateCheckout',
+      label: 'InitiateCheckout',
+      currency: "INR",
+      value:1699
+    }) 
+  // console.log("subscription data",sub.subscriptionId);
+  this.setState({showPayment:true,subscription:sub});
+}
+applyCoupon(){
+  // console.log("apply coupon code");
+  var ins=this;
+  console.log("Coupon Code is ",ins.state.coupon,ins.state.amount)
+  axios.post(`https://www.beusalons.com/api/checkCouponCode`,{ amount:ins.state.amount,couponCode:ins.state.coupon })
+  .then(res => {
+    // console.log(res);
+    // console.log(res.data);
+    if(res.data.success){
+      ins.setState({amount:res.data.data.amount})
+      alert("Coupon Applied Successfully!")
+    }else{
+      alert("Incorrect Coupon Code")
+    }
+  })
+}
+paymentModal(){
+  var ins=this
+  // console.log("payment modal");
+  var options = {
+    "key": "rzp_live_c8wcuzLEGSGlJ5",
+    "amount":ins.state.amount*100 , // 2000 paise = INR 20
+    "name": "Be U Salons",
+    "description": "Book Appointment",
+    "image": "http://res.cloudinary.com/dyqcevdpm/image/upload/v1491484496/beu-logo_srvetg.png",
+    "handler": function (response){
+      // console.log("response of razorpay",response)
+      axios.post(`https://www.beusalons.com/api/captureSubscriptionPayment`,{amount:ins.state.amount*100,paymentId:response.razorpay_payment_id,source:"Webiste",couponCode:ins.state.coupon })
+      .then(res => {
+        // console.log("response of api",res)
+        alert("Subscription Purchased Successfully");
+        ReactPixel.track( 'Purchase', {
+          category: 'Purchase',
+          action: 'Payment Method'+ins.state.paymentMethod,
+          label: 'Purchase',
+          currency: "INR",
+          value:ins.state.appointmentData.payableAmount+ins.state.appointmentData.subscriptionAmount
+        }) 
+      })
+    },
+    "prefill": {
+    },
+    "notes": {
+    },
+    "theme": {
+        "color": "#ff0000"
+    }
+};
+let rzp =new window.Razorpay(options); rzp.open();
+}
+
+  render(){
+
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow:1,
+      slidesToScroll: 1,
+      autoplaySpeed: 3000,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 0,
+            slidesToScroll: 1,
+            infinite: true,
+         
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 0,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 0,
+            slidesToScroll: 1,
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+
+    };
+
+    const { error} = this.state;
+    var ins=this
+    if (!this.state.isLoaded) {
+      return <div> </div>;
+    } else {
+
+
+    return(
+          <Grid container className='subscription-container' style={{marginTop:'0px',paddingTop:'0%', paddingBottom:'2%'}}>
+            <Grid container>
+              <Grid item xs={12}>
+            
+                    <img  className="top-margin-common" style={{width:'100%'}} src={'http://res.cloudinary.com/dyqcevdpm/image/upload/v1529566070/Salon_subscription_header_-_website_o7r6v4.png'}/>
+              </Grid>
+            </Grid>
+      
+       
+    
+            {(!this.state.showPayment)?(<Grid container   style={{backgroundColor:'#ffeae9',paddingBottom:'4%'}}>
+              <Grid item xs={12}>
+                <h4 style={{textAlign:'-webkit-center', padding:'3%', fontSize:'18px'}}>Buy Your Subscription</h4>
+    
+              
+              </Grid>
+              
+           
+                    {
+                      ins.state.items.selectSubscription.tile.map(function(a,i){
+                        if(i==0){
+                          return <Grid key={i} style={{marginBottom:'10px'}} container item xs={12}> <Paper  className='subscription-card' style={{ padding:' 15px'}}>  
+                        <Grid container>
+                        <Grid item xs={10}>
+                            <div className="subscript-page-heading">
+                               {a.heading1} { a.heading2}
+                            </div>
+                        </Grid>
+                        <Grid item xs={2}>
+
+                         {a.title=='GOLD' ? (
+                                      <div><img style={{width:'100%'}}src={'http://res.cloudinary.com/dyqcevdpm/image/upload/v1516701219/GOLD_SUBSCRIPTION_TAG_a8yumg.png'}/></div>
+                                    ) : (
+                                      <div><img style={{width:'100%'}}src={' http://res.cloudinary.com/dyqcevdpm/image/upload/v1516701219/SILVER_SUBSCRIPTION_TAG_ngpmwl.png'}/></div>
+                                    )}
+                         <div style={{fontSize:'10px',textAlign:'right',fontStyle:'italic',paddingRight:'13%',color: 'darkgray',paddingTop:'3%'}}>
+                        <div>Introductory</div>
+                        <div>Offer</div>
+
+                      </div>
+                          
+                        </Grid>
+      
+                        </Grid>
+                        <Grid container className="subscription-page-1">
+                        <Grid item xs={12}>
+                            <div style={{padding: '2px 10px 5px 10px', fontSize:'11px', color:'#808080'}}><img style={{width:'2%', paddingRight:'5px'}}src={'http://res.cloudinary.com/dyqcevdpm/image/upload/v1516693888/subscription_bullet_nlaw9h.png'}/>{a.points[0]}</div>
+                        </Grid>
+                        <Grid item xs={12} style={{borderBottom:'1px solid #f2f2f2',padding:'0px 0px 0px 0px'}}>
+                        <div style={{padding: '2px 10px 10px 10px', fontSize:'11px', color:'#808080'}}><img style={{width:'2%', paddingRight:'5px'}}src={'http://res.cloudinary.com/dyqcevdpm/image/upload/v1516693888/subscription_bullet_nlaw9h.png'}/>{a.points[1]}</div>
+                        </Grid>
+
+                        <Grid item xs={12} style={{padding:'2%'}}  >
+                              <Button onClick={() => ins.buySubscription(a)}  style={{float:'right', fontSize:'12px', backgroundColor:'#64a422', textAlign:'-webkit-center', lineHeight:'22px', color:'#fff', coursor:'pointer', fontWeight:'600'}}>BUY {a.title} Subscription</Button>
+      
+                        </Grid>
+                        </Grid>
+
+                    </Paper>
+
+                    </Grid>
+                        }else{
+                          return null
+                        }
+                        
+
+                    })
+                    }
+ 
+              </Grid>):null}
+          
+         
+              {this.state.showPayment?(<Grid  className="paymentOption" container style={{backgroundColor:'rgb(255, 234, 233)',paddingBottom:'4%'}}>
+                    <Grid item xs={12}>
+
+                    <Paper  className='subscription-card' style={{ padding:' 15px', marginTop:'10px'}}> 
+                      <Grid container style={{ paddingBottom:'10px'}}>
+
+                    <Grid container>
+                        <Grid item xs={4} style={{textAlign:'left',fontsize:'14px',fontweight:'600'}}>Total</Grid>
+                        <Grid item xs={3} style={{textAlign:'right'}}><strike>&#8377; 2999</strike></Grid>
+                        <Grid item xs={2}><div style={{border:'1px solid #d2232a',width:'72%',
+                            borderRadius:'3px',padding:'2px 2px 2px 2px',marginLeft:'12px',fontSize:'10px'}}>Save 43 %</div></Grid>   
+                        <Grid item xs={2} style={{textAlign:'center'}}>&#8377; {this.state.amount}</Grid>
+                      
+                     
+                       
+                        
+                    </Grid>
+
+                      <Grid item xs={12} className="paymenr-option" style={{ paddingBottom:'10px', paddingTop:'10px'}}>Payment Option</Grid>
+                            <Grid item xs={6} className="paymenr-option" style={{marginBottom:'10px'}}>
+                            <Radio
+            checked={this.state.selectedValue === 'a'}
+            onChange={this.handleChange}
+            value="a"
+            name="radio-button-demo"
+            aria-label="A"
+          />Digital Payment
+                            </Grid>
+
+          
+
+                          
+                          <Grid item xs={12} style={{padding:'2%'}}  >
+                              <Button onClick={() => ins.paymentModal()}  style={{ fontSize:'12px', backgroundColor:'#64a422', textAlign:'-webkit-center', lineHeight:'22px', color:'#fff', coursor:'pointer', fontWeight:'600', width:'100%'}}>BUY  Subscription</Button>
+      
+                        </Grid>
+
+                         {/* <Grid item xs={12} className="paymenr-option" style={{padding:'10px'}}>Use Coupon Code
+                            </Grid> */}
+                            <Grid  container>
+                            <Grid item xs={2}></Grid>
+                            <Grid item xs={6}>
+                            <TextField id="input-with-icon-grid2" label="Use Coupon Code" value={ins.state.coupon}  onChange={ins.handleChangeCoupon('coupon')}   placeholder=" Enter your Coupon Code" style={{width:'92%'}}/>
+                            </Grid>
+                            <Grid item xs={2}><button onClick={()=>ins.applyCoupon()} style={{height:'33px', fontWeight:'700', float:'right', width:'88px', color:'#fff', backgroundColor:'#64a322', textTransform:'uppercase', width:'100%', marginTop:'15px',cursor:'pointer'}} >Apply</button></Grid>
+                            </Grid>
+                            <Grid item xs={2}></Grid>
+                    </Grid>
+                    </Paper>
+                    </Grid>
+
+              </Grid>):null}
+              <Grid container justify='center' style={{paddingTop:'3%'}}>
+          <Grid item xs={12} justify='center'>
+               <div justify='center' style={{font:'16px', fontWeight : '700', textAlign:'-webkit-center', padding: '10px'}}>Salons near {this.state.locationName} <Link to={"/location-search?ref=sub"} className="linkDecoration"><i className="material-icons" style={{fontSize:'20px',paddingLeft:'10px',paddingRight:'10px'}}>
+                      search
+                      </i></Link></div>
+
+            <SalonCardSlider salons={this.state.nearbySalons}/>
+          </Grid>      
+        </Grid> 
+           
+            <Grid container>
+                  <Grid item xs={12} style={{textAlign:'center'}}>
+                      <div className='subscription-page-buy' style={{font:'16px', fontWeight:'700'}}>Buy your subscription on call. Just fill your details below and rest be u team will do for you.</div>
+                  </Grid>
+            </Grid>
+              <Grid container justify='center' style={{paddingTop:'10px', paddingBottom:'10px'}}>
+                  <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{textAlign:'center'}}>
+                  
+
+                  <TextField type="text"
+                          style={{width:'90%', marginTop:'0px', marginBottom:'0px'}}
+                          id="name"
+                          label="Enter Name"
+                          value={this.state.name}
+                          onChange={this.handleChange2('name')}     
+                          margin="normal"
+                        
+                        />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{textAlign:'center'}}>
+                       {/* <TextField type='number' style={{width:'90%',marginTop:'0px',marginBottom:'0px'}}
+                          id="number"
+                          maxLength="12"
+                          label="Enter Number"
+                          value={this.state.phoneNumber}
+                          onChange={this.handleChange2('phoneNumber')}
+                          margin="normal"
+                        /> */}
+                        <NumberFormat style={{marginTop:'25px'}}
+                        placeholder="Phone Number" value={this.state.phoneNumber} 
+                        onChange={this.handleChange2('phoneNumber')}  name="phoneNumber"  className="phonenumber" format="+91 ### ### ####"/>
+                  </Grid>
+              </Grid>
+              <Grid container justify='center' style={{padding:'2% 0px 0px 0px'}}>
+                      <Grid item xs={4} sm={2} md={2} lg={2} xl={2}>
+                      <Button style={{backgroundColor:'#9b9b9b', color:"#fff", width:'100%',borderRadius:'5px', fontSize:'15px'}}  onClick={this.submitForm}>Submit</Button>
+                        
+                      </Grid>
+               </Grid>
+              <Grid container>
+                  <Grid item xs={12} style={{textAlign:'center'}}>
+                      <div style={{color:'rgb(185, 141, 0)', padding:'4% 2% 3% 2%'}}>For detailed assistance,</div>
+                  </Grid>
+              </Grid>  
+              <Grid container justify="center" className="sucription-page-whatsapp">
+                  <Grid item xs={6} sm={6} md={3} lg={3} xl={3} >
+                  <Button color="primary" style={{backgroundColor:'#9b9b9b', color:'#fff', width:'93%', padding:'3%', borderRadius:'5px', fontSize:'16px',}}> <a style={{color:'#fff'}} href="https://api.whatsapp.com/send?phone=919667510590&text=I%20want%20to%20know%20more%20about%20your%20subscription%20plan?" >Whats Apps</a></Button>
+                  </Grid>
+                  <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
+                  <Button style={{backgroundColor:'#9b9b9b', width:'93%',borderRadius:'5px', fontSize:'16px',padding:'3%',color:'#fff'}}> <a style={{color:'#fff'}} href="tel:+91-9667510590" >Call Us</a>
+                  </Button>
+                  </Grid>
+              </Grid>  
+              <Grid container  style={{borderTop:'2px solid rgb(185, 141, 0)'}}>
+                  <Grid item xs={12} style={{textAlign:'center'}}>
+                       <div className='subscription-page-title'>{ins.state.items.availSteps.heading}</div>
+                  </Grid>
+            
+              </Grid> 
+              {
+
+                  ins.state.items.availSteps.steps.map(function(a,i){
+
+                      return<Grid container key={i} style={{padding:'1%'}}>
+                      <Grid item xs={2} style={{textAlign:'center'}}>
+                          <img style={{width:'50%'}}src={a.icon}/>
+                      </Grid>
+                      <Grid item xs={10} style={{textAlign:'left'}}>
+                          <div style={{color: 'rgb(185, 141, 0)',fontSize:'20px'}}>{a.title}</div>
+                          <div style={{color: '#58595b', fontSize:'12px', paddingTop:'1%'}}>{a.content}</div>
+                      </Grid>
+                
+                  </Grid> 
+
+                  })
+
+
+              }    
+            
+              <Grid container justify='center' className='subscription-page-head-4' style={{marginTop:' 15px'}}>
+              <h4>{ins.state.items.faq.heading}</h4>
+
+              </Grid>
+              <Grid container  item xs={12}>
+                {
+                  ins.state.items.faq.questions.map(function(a,i){
+
+                      return <ExpansionPanel style={{margin:'16px 0!important'}} key={i} style={{width:'100%'}}>
+                      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography style={{color:'#cb9600', fontSize:'13px', fontWeight:'600'}}>{a.question}</Typography>
+                      </ExpansionPanelSummary>
+                      <ExpansionPanelDetails>
+                        <Typography style={{fontSize:'11px'}}>
+                          {a.answer}
+                        </Typography>
+                      </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                  })
+                }
+                
+              </Grid>    
+              <Grid container justify='center' style={{color:'rgb(185, 141, 0)', padding:'5% 5% 15% 5%', textAlign:'-webkit-center'}}>* Above FAQs are explaining an example of the ?1699 subscription plan
+              </Grid>        
+
+          </Grid>
+
+           
+       
+
+    );
+  }
+  }
+}
+
+  const mapDispatchToProps = dispatch => {
+    var seo = {
+      loadHomePageOnBack : true,
+         title : "Be U Salons Subscription| Premium salon chain in Delhi|NCR, Pune & Bangalore.",
+
+          description : "Be u salons,only salon chain in India providing salon subscription starting in just Rs899 for silver subscription and Rs1699 for Gold subscription where you can enjoy services worth Rs200/month and Rs500/month free for 1 full year/every month respectively. Use Be U subscription for Hair rebonding deals, Hair straightening deals, Hair keratin deals, Facial Deals, Hair Spa deals at 80+ outlets all over Delhi|NCR, Pune & Bangalore.",
+
+        propertyDescription : "Best and low price Subscription for both Men & Women by Be U Salons with 80+ outlets in Delhi|NCR, Pune & Bangalore.",
+     };
+     return {
+         initAppVar: () => {
+         dispatch(initializeAppVar("Buy Subscription", false, seo))
+       },
+      initHomeData: (homeData, page) => {
+        dispatch(initializeHomePageData(homeData, page))
+      },
+     }
+   }
+   const mapStateToProps = state => {
+     
+     return { cart:state.cart }
+   }
+    
+ export default connect(mapStateToProps, mapDispatchToProps)(Subscription);
+
+
