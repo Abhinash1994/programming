@@ -21,3 +21,17 @@ class armstrong{
 		}
 	}
 }
+
+
+
+ <tr ng-repeat="x in quartlyData">
+
+          <td>{{x.parlorName}}</td>
+          <td>{{x.quarterDate | date : 'sort'}}</td>
+          <td >{{x.supportTypes[0].usageThisMonth}}</td>
+          <td >{{x.supportTypes[1].usageThisMonth}}</td>
+          <td >{{x.supportTypes[2].usageThisMonth}}</td>
+            <td >{{x.supportTypes[0].usageThisMonth+x.supportTypes[1].usageThisMonth+x.supportTypes[2].usageThisMonth}}</td> 
+        <td >{{x.supportTypes[1].totalUsageAllowed*3}}</td>
+         <td ></td>
+          <td ></td>
