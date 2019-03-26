@@ -1,0 +1,17 @@
+ if($scope.role!=3){
+                          query={
+                              startDate:$scope.startDate,
+                              endDate:$scope.endDate,
+                              year:$scope.selectedYear,
+                              // parlorId : $scope.selectedParlorId
+                            }
+                          }
+                          console.log("query",query);
+                           console.log("id",$scope.selectedParlor.selectedParlor);
+                           query.parlorId =  $scope.selectedParlor.selectedParlor
+                        $http.post("/role3/newWeeklyReport",query)
+                            .success(function(res)
+                            {
+                                console.log(res)
+                                $scope.salonData=res;
+                            })
