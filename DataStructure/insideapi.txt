@@ -1,0 +1,32 @@
+ handleSubmit(e) {  
+    e.preventDefault();
+    console.log( this.state.pdfSelected,'http://13.233.111.57/getUrl?pages='+this.state.totalpages);
+    var ins=this;
+    axios.get('http://13.233.111.57/getUrl?pages='+this.state.totalpages)
+    .then(function (response) {
+      // handle success
+      console.log("success",response);
+      axios({
+        url: 'http://13.233.111.57/'+response.data,
+        method: 'GET',
+        responseType: 'blob', // important
+      }).then((response) => {
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        console.log("inside")
+        link.setAttribute('download', ins.state.totalpages+'_page.pdf');
+        document.body.appendChild(link);
+        link.click();
+      });
+      
+    })
+
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .then(function () {
+      // always executed
+    });
+  }
