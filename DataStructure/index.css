@@ -1,0 +1,2773 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+  color: #58595b;
+}
+.MuiTabScrollButton-root-271 {
+  flex: 0 0 0px !important;
+  color: inherit;
+}
+.MuiTabScrollButton-root-441 {
+ flex: 0 0 0px !important;
+  color: inherit;
+}
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  border-bottom-width: 1px;
+  z-index: 10;
+  }
+* {
+  margin: 0;
+  padding: 0;
+}
+.vertical{
+  border:0.3px solid #D3D3D3;width:100%;margin-top: 20px;
+}
+.subanner {
+  font-size: 8px;
+  background-color: rgb(254, 198, 64);
+  margin-top: -15px;
+  text-align: -webkit-center;
+  position: absolute;
+  padding: 3px 0px;
+  width: 12.5%;
+}
+@font-face {
+  font-family: 'Arvo';
+  font-display: auto;
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/rC7kKhY-eUDY-ucISTIf5PesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+}
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: #424242 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.flashsalebanner {
+  position: absolute;
+  z-index: 97;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 10px;
+  color: #fff;
+  background-color: #2C52A0;
+  padding: 4px;
+  /* font-weight: 800; */
+  text-transform: uppercase;
+}
+.buysubcription{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding:13px 2px 0px 19px;
+}
+.pt-35{padding-top: 35px}
+
+.list-item-sm {
+  float: left;
+  font-size: 12px;
+  list-style: none;
+  width: 25px;
+  border: 1px solid rgb(101, 154, 44);
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 2px;
+  line-height: 25px;
+  text-align: center;
+  background-color: rgb(101, 154, 44);
+  color: #fff;
+}
+#img_id{
+  height: 110px !important;
+}
+.subanner2 {
+  font-size: 8px;
+  background-color: rgb(214, 152, 25);
+  margin-top: -15px;
+  text-align: -webkit-center;
+  position: absolute;
+  padding: 3px 0px;
+ width: 107px;
+}
+
+.sliderBanner {
+  font-size: 8px;
+  background-color: rgb(214, 152, 25);
+  margin-top: -15px;
+  text-align: -webkit-center;
+  position: absolute;
+  padding: 3px 0px;
+ width: 107px;
+}
+.rating_box{
+  margin-top:20px;
+
+}
+.subscription-card1 {
+  padding: 15px;
+  margin-top: 10px;
+  width: 95%;
+  margin-left: 14px!important;
+}
+.MuiTab-root-313 {
+  min-width: 113px !important;
+}
+.affiliate-btn {
+  background-color: #858282;
+  width:80px;
+  padding: 8px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 600;
+ 
+}
+.salon_name{
+  color:#000;font-weight:600;font-size:23px;overflow:hidden;white-space:nowrap; text-overflow:ellipsis;padding-top:10px;
+}
+.address_1{
+  font-size: 15px;color: rgba(0, 0, 0, 0.42);font-weight:700;overflow:hidden; white-space:nowrap; text-overflow:ellipsis;padding-top:25px;
+}
+/* .salonimg{
+  width:88%;height:224px;padding:4px;margin-left:10px;
+} */
+.dis_tag{
+  margin-left:74px !important;
+}
+.salonimg {
+  width: 90%;
+  height: 182px;
+  /* padding: 0; */
+  margin-left: 10px;
+}
+.login-textbox {
+  width: 100%;
+  height: 35px;
+  border: none;
+  padding-left: 14px;
+  outline: none;
+}
+
+.cardsalondetails {
+  margin-top: -142px;
+  z-index: 0;
+  padding:11px;
+  height:"240px"
+  /* position: absolute; */
+}
+
+.freebie-login-btn {
+  position: absolute;
+  z-index: 99;
+  top: 106px;
+  left: 0%;
+}
+
+.home-salon-effect:hover {
+  box-shadow: 10px 10px 10px #f3f3f3;
+}
+
+.subscription-container {
+  max-Width: 621px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dialog-container {
+  width: 30%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.MuiTabs-scrollable-279{
+  margin-left: -57px !important;
+}
+.hide-mobile-view {
+  display: block;
+}
+
+.hide-desktop-view {
+  display: none;
+}
+.service-container-btn {
+  padding: 10px;
+  border-top: 1px solid #e0dada;
+  border-bottom: 1px solid #e0dada;
+}
+
+.service-cartBtn-2 {
+  background-color: #d2232a!important;
+  width: 66%;
+  text-align: left!important;
+  position: fixed!important;
+  bottom: 0;
+  color: #fff!important;
+  right: 17%;
+  height: 50px;
+  max-height: 60px;
+  min-height: 60px;
+  line-height: 45px;
+  text-transform: capitalize!important;
+}
+
+.service-cartBtn-3 {
+  background-color: #7bc242!important;
+  width: 66%;
+  text-align: left!important;
+  position: fixed!important;
+  bottom: 0;
+  color: #fff!important;
+  right: 17%;
+  height: 50px;
+  max-height: 60px;
+  min-height: 60px;
+  line-height: 45px;
+  text-transform: capitalize!important;
+}
+
+.list-decoretion li {
+  list-style: none;
+  /* margin-left: 10px;
+  padding-top: 2%; */
+  padding-right: 15px;
+  
+}
+
+.app-salon-pass-get {
+  text-align: center;
+  color: #d2232a;
+  font-size: 46px;
+  font-weight: 700
+}
+.SimpleModal-paper-295{
+  background-color: #ffffffe6 !important;
+}
+.more-info-page-head {
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+/* .headerSearch {
+ 
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 50px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  width: 87%;
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+} */
+.more-infopage-box {
+  margin-left: 10px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.more-infopage-box img {
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+}
+
+.service-conatiner-box {
+  padding-top: 8%;
+}
+
+
+/* .MuiListItem-gutters-252 {
+padding-left:0px!important;
+ padding-right:0px!important;
+} */
+
+.MuiExpansionPanelSummary-root-264.MuiExpansionPanelSummary-expanded-265 {
+  padding-top: 1%;
+  height: 45px!important;
+  min-height: 35px!important;
+}
+
+
+/******subscription ***************/
+
+.subscription-page-head-4 {
+  background-color: gainsboro;
+  padding: 1% 0% 1% 0%;
+}
+
+.subscription-page-title {
+  padding: 2% 4% 2% 4%;
+  text-align: -webkit-center;
+  color: rgb(88, 89, 91);
+  font-size: 25px;
+}
+
+.sucription-page-whatsapp {
+  padding-bottom: 2%;
+  padding-left: 13px;
+  padding-top: 1%;
+}
+
+.subscription-page-buy {
+  text-align: -webkit-center;
+  margin-top: 5%;
+  font-size: 15px;
+  padding: 0% 0% 0% 0%;
+  color: rgb(88, 89, 91);
+}
+
+.subscription-page-1 {
+  margin-top: 0px;
+}
+.MuiTabs-scroller-236{
+  margin-left:-56px !important;
+}
+.MuiTabs-scroller-408{
+  margin-left: -56px !important;
+}
+.MuiTabScrollButton-root-242{
+  z-index: 9999;
+}
+.subscript-page-heading {
+  color: #cc802e;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.servie-percentage-img {
+  margin: 0 auto;
+  width: 2%;
+  padding-top: 6px;
+  position: absolute;
+  left: 15px;
+}
+
+.margin-inherit-s {
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-align: right;
+  padding-right: 17px;
+}
+
+.margin-inherit-s {
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-align: right;
+  padding-right: 17px;
+}
+
+.affiliate-lock {
+  position: absolute;
+  right: 20%;
+  padding: 5px;
+  font-size: 9px;
+  opacity: 1;
+  color: #000;
+  font-weight: 600;
+}
+
+.home-affiliate-sub {
+  background-color: rgb(254, 198, 64);
+  position: absolute;
+  right: 0%;
+  padding: 5px;
+  font-size: 9px;
+  opacity: 1;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0px 1px 6px #b2adad;
+}
+
+.MuiExpansionPanelDetails-root-258 {
+  display: flex;
+  padding: 0px 0px 0px!important;
+}
+
+.time-box {
+  text-align: center;
+  padding: 10% 5% 10% 5%;
+  margin: 15px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.service-department {
+  text-transform: capitalize;
+  color: #424242;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: -7px;
+}
+
+.header-search-text {
+  float: left;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+   width: auto; 
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+}
+.MuiPaper-rounded-28{
+  margin-left: 0px!important;
+}
+.home-affilate-card {
+  background: #d3d3d3;
+  position: absolute;
+  height: 104px;
+  width: 30%;
+  opacity: .7;
+}
+
+.apllysubscription {
+  height: 35px;
+  border: none;
+  padding-left: 10px;
+}
+.MuiTabScrollButton-root-273{
+  z-index: -5;
+}
+.MuiSvgIcon-root-243 {
+  fill: currentColor;
+  width: .8em!important;
+  height: .8em!important;
+  display: inline-block;
+  font-size: 24px;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.subscription-card {
+  /* width: 91%;
+    margin-left: 27px !important; */
+    margin-top: 24%;
+}
+
+.profile-img {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.list-profile {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.profile-icon-w {
+  width: 28%;
+}
+
+.card-home {
+  padding-bottom: 7%;
+}
+
+.service-container {
+  /* max-width:100%; */
+  overflow-x: auto;
+  white-space: nowrap;
+  height: 80px;
+  padding-top: 2%;
+}
+.subscrptionblock1{
+  margin-top: -151px;
+  margin-bottom: 100px;
+}
+/* .paymentOption{
+  margin-top: -12px;
+  margin-bottom: 100px;
+ 
+} */
+.anglearrow{
+  color:#fff;
+  margin-top: 18px !important;
+  cursor: pointer;
+}
+.linkDecoration {
+  text-decoration: none;
+  cursor: pointer!important;
+  color: #000;
+}
+.containersubscription{
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: -5;
+}
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imag-salon-detailes {
+  width: 100%;
+  height: 100%;
+}
+
+.salon-standard {
+
+  height: 26px;
+  padding-left: 10px;
+}
+
+.salon-details-rating {
+  border: 1px solid rgb(101, 154, 44);
+  width: 17px;
+  height: 14px;
+  line-height: 16px;
+  padding: 2px 6px 5px 4px;
+  background: rgb(101, 154, 44);
+  color: #fff;
+  border-radius: 4px;
+  margin-top: -16px;
+  z-index: 4;
+  position: absolute;
+  left: 49%;
+  text-align: center;
+  font-size: 13px;
+}
+
+.addres-container {
+  padding-left: 5%;
+  padding-bottom: 0%;
+  padding-top: 1%;
+}
+
+.list-item {
+  float: left;
+  list-style: none;
+  width: 23px;
+  border: 1px solid rgb(101, 154, 44);
+  height: 23px;
+  border-radius: 50%;
+  margin-left: 4px;
+  line-height: 21px;
+  text-align: center;
+  background-color: rgb(101, 154, 44);
+  color: #fff;
+  padding: 2px;
+  font-size: 14px;
+}
+
+.list-item1 {
+  float: left;
+  list-style: none;
+  width: 23px;
+  border: 1px solid red;
+  height: 23px;
+  border-radius: 50%;
+  margin-left: 4px;
+  line-height: 21px;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  padding: 2px;
+  font-size: 14px;
+}
+
+.list-item3 {
+  float: left;
+  list-style: none;
+  width: 23px;
+  border: 1px solid #FDC533;
+  height: 23px;
+  border-radius: 50%;
+  margin-left: 4px;
+  line-height: 21px;
+  text-align: center;
+  background-color: #FDC533;
+  color: #fff;
+  font-size: 13px;
+  padding: 2px;
+  font-size: 14px;
+}
+
+.list-item3-sm {
+  font-size: 12px;
+  float: left;
+  list-style: none;
+  width: 25px;
+  border: 1px solid #FDC533;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 2px;
+  line-height: 25px;
+  text-align: center;
+  background-color: #FDC533;
+  color: #fff;
+}
+
+.MuiTab-label-246 {
+  font-size: 10px!important;
+}
+
+.list-review-color {
+  color: #B1B2B4;
+}
+
+.addres {
+  color: #000;
+}
+
+.xcrp {
+  text-align: -webkit-center;
+  color: #d42022;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+
+.avdg {
+  margin-top: -15px !important;
+  padding-left: 36px !important;
+  font-size: 13px;
+  padding-bottom: 11px;
+}
+
+.addres-container-sm {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.detail-serList {
+  /* border: 1px solid #d2232a; */
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 7px
+}
+
+.salon-details-bookAppointment {
+  background: #d2232a;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  color: #fff;
+  padding: 3%;
+}
+
+.service-btn {
+  padding-bottom: 14%;
+  padding-top: 4%;
+}
+
+.commonmargin-top {
+  margin-top: 10px;
+  
+}
+
+.material-icons {
+  margin-top:5px;
+}
+
+.commonPadding {
+  padding-bottom: 1%;
+  padding-top: 3%;
+}
+
+.subscription-type {
+  background: #fff;
+  width: 30%;
+  padding: 2px 0% 2px 0%;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.subscriptioContainer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #FDC533;
+  padding: 1% 0% 3% 0%;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  width: 99%;
+}
+
+
+/* .common-container{
+max-Width: 900px;
+margin: 0 auto;
+position: relative;
+} */
+
+.common-container {
+  max-Width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.home-container {
+  max-Width: 1033px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.commonfontColor {
+  color: #58595b;
+  font-size: 12px;
+}
+
+.salonRatingBox {
+  background: rgb(101, 154, 44);
+  text-align: center;
+  width: 40px;
+  height: 13px;
+  line-height: 13px;
+  border-radius: 2px;
+  color: #fff;
+  /* margin-left: 0px; */
+  font-size: 9px;
+  float: right;
+}
+.sliderRatingBox {
+  background: rgb(101, 154, 44);
+  text-align: center;
+  width: 40px;
+  height: 13px;
+  line-height: 12px;
+  border-radius: 2px;
+  color: #fff;
+  /* margin-left: 0px; */
+  font-size: 9px;
+  float: right;
+}
+.RatingBox {
+  background: rgb(101, 154, 44);
+  width: 48px;
+  height: 16px;
+  text-align: center;
+  border-radius: 2px;
+  color: #fff;
+  margin-left: -6px;
+  font-size: 13px;
+  padding: 2px;
+  margin-left: 3px;
+  margin-top: 7px;
+}
+.salonDetailsAddBox {
+  border-bottom: 1px solid #d0d2d4;
+  padding-bottom: 2px;
+}
+
+.serviceBox {
+  background: red!important;
+}
+
+.serviceBox2 {
+  background: green!important;
+}
+
+.salonflash {
+  height: 15px;
+  padding: 10px;
+}
+
+.ptb5px {
+  /* padding-top: 5px;
+padding-bottom: 5px; */
+  font-size: 12px!important;
+}
+
+.MuiAppBar-colorDefault-24 {
+  background-color: #ffffff !important;
+}
+
+.service-details-card {
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+  width: 100%;
+}
+
+.MuiPaper-elevation4-33 {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 3px 0px rgba(0, 0, 0, 0.12) !important;
+}
+
+.MuiTab-wrapper-277 {
+  width: 70% !important;
+}
+
+.ImageAvatars-bigAvatar-3 {
+  width: 60px;
+  height: 60px;
+}
+
+.ImageAvatars-avatar-2 {
+  margin: 10px;
+}
+
+.MuiAvatar-img-6 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+}
+
+.timemap {
+  margin-left: 15px;
+  font-size: 13px;
+  color: #9e9d9d;
+}
+
+.shado {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+}
+
+.MuiAvatar-4 {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  align-items: center;
+  user-select: none;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.blackButton {
+  background-color: black;
+  color: white;
+}
+
+.whiteButton {
+  background-color: white;
+}
+
+.submitReview {
+  width: 66%;
+  position: fixed!important;
+  bottom: 0;
+  left: 17%;
+}
+
+.flashImg {
+  width: 6.5em;
+  position: absolute;
+  z-index: 97;
+  margin-left: -3px;
+  margin-top: 8px;
+}
+
+.transparentcont-box {
+  /* background-color: rgba(80, 74, 74, 0.95); */
+  position: absolute;
+  width: 100%;
+  height: 189px;
+  opacity: .5;
+}
+
+.freebieIcon {
+  width: 80px;
+  height: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: #58595b;
+}
+
+video {
+  width: 100% !important
+}
+
+.beu-about {
+  font-size: 14px;
+  font-weight: 200;
+  color: #58595b;
+ 
+}
+
+.padding10 {
+  padding: 10px
+}
+
+.padding15 {
+  padding: 15px
+}
+
+.padding20 {
+  padding: 20px
+}
+.appBar{
+  background: '#f1f2f2';
+  margin-top:1px;
+  margin-left:75px;
+}
+ .MuiTabs-scrollable-269{
+      margin-left: -57px;
+    /* z-index: -1; */
+}  
+.MuiTabs-scrollButtonsAuto-271{
+  z-index: 5;
+}
+.pricelist{
+  padding-top: 10px;
+  /* margin-left: 75px; */
+}
+
+.salon-rating {
+  border: 1px solid #0c6e0c;
+  width: 63px;
+  height: 25px;
+  padding: 3px;
+  background: #0c6e0c;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.ratingstars {
+  font-size: 18px;
+  float: right;
+}
+
+.meter {
+  height: 1px;
+  position: relative;
+  background: #0c6e0c;
+  border-radius: 5px;
+  padding: 2px;
+  width: 100%;
+  float: left;
+  margin-top: 5px;
+}
+
+.meter2 {
+  height: 1px;
+  position: relative;
+  background: #dadada;
+  border-radius: 5px;
+  padding: 2px;
+  width: 100%;
+  float: left;
+  margin-top: 5px;
+}
+
+.border {
+  border-radius: 10px !important;
+}
+
+.paymenr-option {
+  color: #9c9c9c;
+  font-size: 13px;
+}
+
+.pay-now2 {
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+  height: 40px;
+  font-size: 16px;
+  background-color: #64a422;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.text-rating {
+  padding: 5px;
+}
+
+.salon-rating-sm {
+  border: 1px solid #0c6e0c;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  background: #0c6e0c;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 9px;
+  text-align: -webkit-center;
+}
+
+.service-cartBtn-1 {
+  background-color: #7bc242!important;
+  width: 52%;
+  text-align: left!important;
+  position: fixed!important;
+  bottom: 0;
+  color: #fff!important;
+  right: 24%;
+  height: 50px;
+  max-height: 60px;
+  min-height: 60px;
+  line-height: 45px;
+  text-transform: capitalize!important;
+  z-index: 9999;
+}
+
+sup {
+  bottom: 2ex;
+}
+
+sup,
+sub {
+  font-size: 36%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+
+/* media Query */
+@media (min-width:1920px){
+  .appBar{
+    margin-left: 358px !important;
+  }
+  .paper {
+    margin-right: 357px !important;
+}
+.hide-mobile-view {
+  width: 56% !important;
+  
+}
+.service-cartBtn-1{
+  width:100% !important;
+  position: relative !important;
+  right: 0!important;
+}
+
+}
+
+@media (min-width:1420px) and (max-width:1800px) {
+  .paper {
+    margin-right: 120px !important;
+  } 
+  .appBar{
+    margin-left:121px !important;
+  }
+  .MuiTabs-scrollable-256{
+    margin-left: -53px!important;
+    z-index: -10;
+  }
+  .service-cartBtn-1 {
+    width: 100%;
+    background-color: #7bc242!important;
+    position: relative!important;
+    bottom: 0;
+    left: 0px;
+    height: 50px;
+    max-height: 60px;
+    min-height: 60px;
+    line-height: 50px;
+    text-align: left!important;
+    z-index: 5;
+}
+.view_cart{
+  display: block;
+}
+  .service-cartBtn-1 {
+    width: 100%;
+    background-color: #7bc242!important;
+    position: relative!important;
+    bottom: 0;
+    left: 0px;
+    height: 50px;
+    max-height: 60px;
+    min-height: 60px;
+    line-height: 50px;
+    text-align: left!important;
+    z-index: 5;
+}
+.subanner{width:12.5% !important;}
+.view_cart{
+  display: none;
+}
+  .RatingBox {
+    background: rgb(101, 154, 44);
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 2px;
+    color: #fff;
+    /* margin-left: -6px; */
+    font-size: 10px;
+    padding: 2px;
+  
+  }
+  .cardsalondetails{
+    padding: 11px;
+    height: 183px;
+    margin-top: -130px;
+  }
+  .rating_box{
+    margin-top:10px;
+  
+  }
+  .service-cartBtn-2 {
+      background-color: #d2232a!important;
+      width: 52%;
+      text-align: left!important;
+      position: fixed!important;
+      bottom: 0;
+      color: #fff!important;
+      right: 24%;
+      height: 50px;
+      max-height: 60px;
+      min-height: 60px;
+      line-height: 45px;
+      text-transform: capitalize!important;
+  }
+  /* .Pay-via {
+      color: #000;
+      font-weight: 700;
+      width: 51.5%!important;
+      background-color: #f2f2f3;
+      padding-bottom: 1%;
+      position: fixed;
+      bottom: 52px;
+      box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+      padding-left: 13px;
+      max-height: 40px;
+      line-height: 40px;
+  } */
+  .Pay-via {
+    color: #000;
+    width: 50%!important;
+    position: fixed;
+    box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+    padding-left: 13px;
+    margin-left: 5.5%;
+    margin-right: 70px;
+    bottom: 56px;
+    right: 21%;
+    background-color: #f2f2f3;
+    height: 50px;
+    max-height: 60px;
+    align-items: center;
+}
+
+}
+
+@media (min-width:1300px) and (max-width:1400px) {
+
+  .MuiTabs-scrollable-256{
+    margin-left: -53px!important;
+    z-index: -10;
+  }
+  .MuiTabs-scrollable-256{
+    margin-left: -53px!important;
+  }
+  .subanner {
+      font-size: 8px;
+      background-color: rgb(254, 198, 64);
+      margin-top: -15px;
+      text-align: -webkit-center;
+      position: absolute;
+      padding: 3px 0px;
+      width: 124.5px;
+  }
+
+  .service-1{
+    background-color: #7bc242!important;
+    width: 100%;
+    height: 50px;
+  }
+  .service-cartBtn-1 {
+      width: 100%;
+      background-color: #7bc242!important;
+      position: relative!important;
+      bottom: 0;
+      left: 0px;
+      height: 50px;
+      max-height: 60px;
+      min-height: 60px;
+      line-height: 50px;
+      text-align: left!important;
+      z-index: 5;
+  }
+  /* .subanner{width: 12.5% !important;} */
+  .view_cart{
+    display: none;
+  }
+  /* .Pay-via {
+      color: #000;
+      font-weight: 700;
+      width: 66%!important;
+      background-color: #f2f2f3;
+      padding-bottom: 1%;
+      position: fixed;
+      bottom: 57px;
+      box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+      padding-left: 13px;
+      max-height: 40px;
+      line-height: 40px;
+  } */
+  /* .Pay-via {
+    color: #000;
+    font-weight: 700;
+    width: 64%!important;
+    background-color: #f2f2f3;
+    padding-bottom: 1%;
+    position: fixed;
+    bottom: 52px;
+    -webkit-box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+    box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+    padding-left: 13px;
+    max-height: 40px;
+    line-height: 40px;
+    margin-left: 13.5%;
+} */
+.Pay-via {
+  color: #000;
+  width: 50%!important;
+  position: fixed;
+  box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+  padding-left: 13px;
+  margin-left: 5.5%;
+  margin-right: 70px;
+  bottom: 65px;
+  right: 21%;
+  background-color: #f2f2f3;
+  height: 50px;
+  max-height: 60px;
+  align-items: center;
+  }
+  .Pay-via1 {
+    color: #000;
+    width: 220% !important;
+    box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+    padding-left: 13px;
+    background-color: #f2f2f3;
+    height: 50px;
+    max-height: 60px;
+    -ms-flex-align: center;
+   
+    align-items: center;
+}
+}
+
+@media (min-width:1280px){
+  .appBar {
+    background: '#f1f2f2';
+    margin-top: 1px;
+    margin-left: 32px !important;
+    }
+    .paper {
+      margin-right: 33px !important;
+  }
+  .hide-mobile-view {
+    width: 94% !important;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  .Pay-via1 {
+    color: #000;
+    width: 220% !important;
+    box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+    padding-left: 13px;
+    background-color: #f2f2f3;
+    height: 50px;
+    max-height: 60px;
+    -ms-flex-align: center;
+   
+    align-items: center;
+  }
+  .service-cartBtn-1 {
+    width: 100%;
+    background-color: #7bc242!important;
+    position: relative!important;
+    bottom: 0;
+    left: 0px;
+    height: 50px;
+    max-height: 60px;
+    min-height: 60px;
+    line-height: 50px;
+    text-align: left!important;
+    z-index: 5;
+  }
+  .view_cart{
+    display: none;
+  }
+  
+  
+}
+
+@media (min-width:1366px){
+  .appBar {
+    background: '#f1f2f2';
+    margin-top: 1px;
+    margin-left: 75px !important;
+    }
+    .paper {
+      margin-right: 74px !important;
+  }
+  .hide-mobile-view {
+    width: 87% !important;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+}
+@media (max-width:1024px) and (max-width:1300px) {
+  .MuiTabs-scrollable-256{
+    margin-left: -53px!important;
+    z-index: -10;
+  }
+  
+  .Pay-via1 {
+    color: #000;
+    width: 220% !important;
+    box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+    padding-left: 13px;
+    background-color: #f2f2f3;
+    height: 50px;
+    max-height: 60px;
+    -ms-flex-align: center;
+   
+    align-items: center;
+  }
+  .service-cartBtn-1 {
+    width: 100%;
+    background-color: #7bc242!important;
+    position: relative!important;
+    bottom: 0;
+    left: 0px;
+    height: 50px;
+    max-height: 60px;
+    min-height: 60px;
+    line-height: 50px;
+    text-align: left!important;
+    z-index: 5;
+}
+.view_cart{
+  display: none;
+}
+  .paper{
+    display: none;
+  }
+  .hide-desktop-view {
+    display: block;
+  }
+  .appBar{
+    background: '#f1f2f2';
+    margin-top:1px;
+    margin:0;
+  }
+ .pricelist{
+   margin-left: 0;
+ }
+ .hide-mobile-view {
+  width: 100% !important;
+  border-radius: 4px;
+  margin-top: 0px !important;
+}
+.paper{
+  width:100%;
+}
+
+  .flashImg {
+      width: 158px;
+      position: absolute;
+      z-index: 97;
+      margin-left: -3px;
+      margin-top: 8px;
+  }
+  .header-search-text {
+    float: left;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 50px;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+@media (min-width:1024px) and (max-width:1200px) {
+  .review {
+    padding-top: 4px;
+    padding-left: 17px;
+    
+  }
+  .paymentOption {
+    margin-top: -13ox !important;
+    
+  }
+  .SimpleMediaCard-img-204{
+    height: 114px !important;
+  } 
+  #img_id{
+    height: 116px !important;
+  }
+  .genderF{
+    margin-left: -10px !important;
+  }
+  .gender{
+    padding-left:8px;
+  }
+  .toggle{
+    margin-left: -10px !important;
+  }
+  .subanner {
+    font-size: 8px;
+    background-color: rgb(254, 198, 64);
+    margin-top: -15px;
+    text-align: -webkit-center;
+    position: absolute;
+    padding: 3px 0px;
+    width: 19%;
+  }
+  .dis_tag {
+    margin-left: 0px !important;
+  }
+
+}
+@media (min-width: 960px){
+  .MuiTab-root-272 {
+    min-width: 113px !important;
+  }
+  .MuiTab-root-323{
+    min-width: 0px !important;
+  }
+  .MuiTab-root-454{
+    min-width: 0px !important;
+  }
+}
+
+
+@media  (min-width:960px) and (max-width:1024px) {
+  .subanner {
+    font-size: 8px;
+    background-color: rgb(254, 198, 64);
+    margin-top: -15px;
+    text-align: -webkit-center;
+    position: absolute;
+    padding: 3px 0px;
+    width: 198px;;
+}
+.service-conatiner-box {
+  padding-top: 11%;
+  }
+  .SimpleMediaCard-img-204{
+    height: 114px !important;
+  } 
+  
+}
+
+@media  (min-width:768px) and (max-width:960px) {
+  .subanner {
+    font-size: 8px;
+    background-color: rgb(254, 198, 64);
+    margin-top: -15px;
+    text-align: -webkit-center;
+    position: absolute;
+    padding: 3px 0px;
+    width: 39.1% !important;
+}
+.paymentOption {
+  margin-top: -13px !important;
+  margin-bottom: 100px;
+ 
+}
+.header-search-text {
+  float: left;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 50px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+}
+@media  (min-width:615px) and (max-width:768px) {
+  .salonName{
+    font-size: 24px !important;
+  }
+  .salonadress{
+    font-size: 20px !important;
+  }  
+  .cuttingprice{
+    font-size: 12px !important;
+  }
+  .saloncard{
+    margin-top:20px !important;
+  }
+  #img_id{
+    height: 169px !important;
+  }
+  .rating1{
+    margin-left: -15px !important;
+  }
+  .service-conatiner-box {
+    padding-top: 11%;
+  }
+  .paymentOption {
+    margin-top: -13px !important;
+    margin-bottom: 100px;
+    /* margin-right: 28px;
+    margin-left: 27px; */
+}
+  .header-search-text {
+    float: left;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 50px;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis !important;
+    width: 53% !important;
+    white-space: nowrap;
+    overflow: hidden !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+  }
+  
+  #img_id {
+    height: 110px !important;
+  }
+  .salonName{
+    font-size: 13px !important;
+  }
+  .salonadress{
+    font-size: 12px !important;
+  }
+  .saloncard{
+    margin-top: -3px !important;
+  }
+
+}
+@media  (min-width:482px) and (max-width:768px) {
+  .SimpleMediaCard-img-204{
+    height: 0 !important;
+  }
+ 
+.footerhomebtn{
+  line-height:3 !important;
+}
+.subscrptionblock1{
+  margin-top: -152px;
+  margin-bottom: 100px;
+}
+.subscription-card {
+  width: 100%;
+    margin-left: 0px !important;
+   
+}
+.paymentOption {
+  margin-top: -13px !important;
+  margin-bottom: 100px;
+  /* margin-right: 28px;
+  margin-left: 27px; */
+}
+  .subanner {
+    font-size: 8px;
+    background-color: rgb(254, 198, 64);
+    margin-top: -15px;
+    text-align: -webkit-center;
+    position: absolute;
+    padding: 3px 0px;
+    width: 197px !important;
+}
+.salonRatingBox {
+  background: rgb(101, 154, 44);
+  text-align: center;
+  width: 40px;
+  height: 13px;
+  line-height: 12px;
+  border-radius: 2px;
+  color: #fff;
+  /* margin-left: 0px; */
+  font-size: 10px;
+  float: right;
+  margin-right: 0px !important;
+}
+.sliderRatingBox {
+  background: rgb(101, 154, 44);
+  text-align: center;
+  width: 40px;
+  height: 13px;
+  line-height: 12px;
+  border-radius: 2px;
+  color: #fff;
+  /* margin-left: 0px; */
+  font-size: 10px;
+  float: right;
+  
+}
+
+}
+
+@media (max-width:1024px) and (max-width:768px) {
+  .genderF{
+    margin-left: -10px !important;
+  }
+  .gender{
+    padding-left:8px;
+  }
+  .toggle{
+    margin-left: -10px !important;
+  }
+  .MuiTabs-scrollable-256{
+    margin-left: -53px!important;
+    z-index: -10;
+  }
+  .service-cartBtn-1 {
+    width: 100%;
+    background-color: #7bc242!important;
+    position: relative!important;
+    bottom: 0;
+    left: 0px;
+    height: 50px;
+    max-height: 60px;
+    min-height: 60px;
+    line-height: 50px;
+    text-align: left!important;
+    z-index: 5;
+}
+.dis_tag {
+  margin-left: 0px !important;
+}
+.view_cart{
+  display: block;
+}
+  .paper{
+    display: none;
+  }
+  .hide-desktop-view {
+    display: block;
+  }
+  .appBar{
+    background: '#f1f2f2';
+    margin-top:1px;
+    margin:0;
+  }
+  .pricelist{
+    margin-left: 0px;
+  }
+  .hide-mobile-view {
+    width: 100% !important;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  .paper{
+    width:100%;
+  }
+
+  .servicestittle {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    text-align: -webkit-center;
+    padding-top: 10px;
+    font-size: 10px;
+    /* white-space: nowrap; */
+}
+  .flashImg {
+      width: 244px;
+      position: absolute;
+      z-index: 97;
+      margin-left: -3px;
+      margin-top: 8px;
+  }
+  .service-cartBtn-1 {
+      background-color: #7bc242!important;
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      left: 0%;
+      background-color: #7bc242!important;
+      height: 65px;
+      z-index: 9999;
+  }
+  .service-cartBtn-2 {
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      right: 0%;
+      height: 50px;
+      max-height: 60px;
+      line-height: 45px;
+  }
+  .service-cartBtn-3 {
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      right: 0%;
+      height: 50px;
+      max-height: 60px;
+      line-height: 45px;
+  }
+  .submitReview {
+      width: 90%;
+      position: fixed!important;
+      bottom: 0;
+      left: 5%;
+  }
+  .hide-mobile-view {
+    display: none;
+  }
+}
+
+@media (min-width:482px) and (max-width:768px) {
+  .footerhomebtn{
+    padding-top:15px !important;
+  }
+  .service-conatiner-box{
+    padding-top:55px;
+}
+  .saloncard{
+    margin-top: -3px !important;
+  }
+  .genderF{
+    margin-left: 8px !important;
+  }
+  .gender{
+    padding-left:8px;
+  }
+  .MuiTabs-scroller-236{
+    margin-left:-50px;
+  }
+  .MuiTabs-scrollButtonsAuto-240 {
+    display: block !important;
+}
+  .paper{
+    display: none;
+  }
+  .hide-desktop-view {
+    display: block;
+  }
+  .servie-percentage-img {
+    margin: 0 auto;
+    width: 2%;
+    padding-top: 6px;
+    position: absolute;
+    left: 23px;
+}
+.select_calender{
+  color:red !important;
+}
+  .widget-svg{
+    height: 14px !important;
+    margin-left: 0px;
+  }
+  .ambience{
+    font-size:10px !important;
+  }
+  .recent{
+    font-size:10px !important;
+  }
+  .rating{
+    font-size:10px !important;
+  }
+  .reviews{
+    font-size: 10px !important;
+  }
+  .list-item {
+    float: left;
+    list-style: none;
+    width: 16px;
+    border: 1px solid rgb(101, 154, 44);
+    height: 16px;
+    border-radius: 50%;
+    margin-left: 4px;
+    line-height: 15px;
+    text-align: center;
+    background-color: rgb(101, 154, 44);
+    color: #fff;
+    font-size: 11px;
+    padding: 2px;
+  }
+  .list-item1 {
+    float: left;
+    list-style: none;
+    width: 16px;
+    border: 1px solid rgb(101, 154, 44);
+    height: 16px;
+    border-radius: 50%;
+    margin-left: 4px;
+    line-height: 15px;
+    text-align: center;
+    background-color: rgb(101, 154, 44);
+    color: #fff;
+    font-size: 11px;
+    padding: 2px;
+  }
+  .list-item3 {
+    float: left;
+    list-style: none;
+    width: 16px;
+    border: 1px solid rgb(101, 154, 44);
+    height: 16px;
+    border-radius: 50%;
+    margin-left: 4px;
+    line-height: 15px;
+    text-align: center; 
+    background-color: rgb(101, 154, 44);
+    color: #fff;
+    font-size: 11px;
+    padding: 2px;
+  }
+  .Lowestprice{
+    padding: 6px 0px 0px 15px !important;
+  }
+  .reivew{
+    font-size: 9px;
+  }
+  .RatingBox {
+    background: rgb(101, 154, 44);
+    width: 34px;
+    height: auto;
+    text-align: center;
+    border-radius: 2px;
+    /* color: #fff; */
+    margin-left: -2px;
+    font-size: 10px;
+    /* padding: 2px; */
+  }
+  .top_1{
+    background-color: rgb(74, 74, 74);
+    width: 90%;
+    height: 126px !important;
+  }
+  .cardsalondetails{
+    padding: 11px;
+    height: 144px;
+    margin-top: -141px;
+  }
+  .rating_box{
+    margin-top:10px;
+  
+  }
+  .vertical{
+    border:0.3px solid #D3D3D3;width:100%;margin-top:9px;
+  }
+  .affiliate-btn {
+    font-size: 10px !important;
+    border-radius: 4px;
+    margin-top: 3px;
+    box-shadow: 2px 2px 2px 1px #D3D3D3;
+    cursor: pointer;
+    width: 62px;
+}
+  .salonimg{
+    width: 97%;
+    height: 139px;
+    padding: 4px;
+    margin-left: -6px;
+  }
+  .commonmargin-top {
+    margin-top: 10px;
+    margin-left: -14px;
+}
+  .appBar{
+    background: '#f1f2f2';
+    margin-top:1px;
+    margin:0;
+  }
+  .pricelist{
+    margin-left: 0px;
+  }
+  .paper{
+    width:100%;
+  }
+ 
+
+.Pay-via {
+  color: #000;
+  width: 97%!important;
+  position: fixed;
+  -webkit-box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+  box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+  /* padding-left: 13px; */
+  /* margin-left: 5.5%; */
+  /* margin-right: 70px; */
+  bottom: 65px;
+  right: 2%;
+  background-color: #f2f2f3;
+  height: 50px;
+  max-height: 60px;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+.divleft {
+      padding-left: 25px;
+  }
+  .service-cartBtn-1 {
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      left: 0%;
+      background-color: #7bc242!important;
+      height: 65px;
+      z-index: 9999;
+  }
+  .header-search-text {
+      float: left;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 50px;
+      white-space: nowrap;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      width: 86%;
+      white-space: nowrap;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+     
+  }
+  .service-cartBtn-2 {
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      right: 0%;
+  }
+  .service-cartBtn-3 {
+      width: 100%!important;
+      position: fixed!important;
+      bottom: 0;
+      right: 0%;
+  }
+  .submitReview {
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      left: 0%;
+  }
+  .margin-inherit {
+      margin-bottom: 8px;
+      font-size: 11px;
+  }
+  .home-affilate-card {
+      background: #d3d3d3;
+      position: absolute;
+      height: 104px;
+      width: 63%;
+      opacity: .7;
+  }
+  .affiliate-lock {
+      position: absolute;
+      right: 30%;
+      padding: 5px;
+      font-size: 9px;
+      opacity: 1;
+      color: #000;
+      font-weight: 600;
+  }
+  .home-affiliate-sub {
+      background-color: rgb(254, 198, 64);
+      position: absolute;
+      right: 0%;
+      padding: 5px;
+      font-size: 9px;
+      opacity: 1;
+      color: #000;
+      font-weight: 600;
+  }
+  .hide-mobile-view {
+      display: none;
+  }
+  .sliderBanner{
+    font-size: 6px;
+    background-color: rgb(214, 152, 25);
+    margin-top: -11px;
+    text-align: -webkit-center;
+    position: absolute;
+    padding: 3px 0px;
+    width: 93px;
+  }
+}
+.review{
+  font-size: 8px;
+  color: rgb(101, 154, 44);
+  margin-top:4px; 
+  float:right;
+  /* margin-left: 5px; */
+}
+.slidereview{
+  font-size: 8px;
+  color: rgb(101, 154, 44);
+  margin-top:4px; 
+  float:right;
+  margin-left: -5px;
+}
+@media (min-width:320px) and (max-width:380px) {
+  .subanner {
+    width: 36.7% !important;
+  }
+  #img_id{
+    height: 110px !important;
+  }
+  .SimpleModal-paper-351 {
+    width: 312px;
+    padding: 32px;
+    position: absolute;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    background-color: #fff !important;
+}
+.subscription-card {
+  width: 95%;
+  margin-left: 0px !important;
+  margin-top: -17px !important;
+}
+.footerhomebtn{
+  padding-top:15px !important;
+}
+
+}
+
+@media (min-width:320px) and (max-width:480px) {
+  
+  .SimpleModal-paper-351 {
+    width: 312px;
+    padding: 32px;
+    position: absolute;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    background-color: #fff !important;
+}
+.subscription-card1 {
+  width: 100%;
+}
+.subs_salon{
+  font-size: 26px !important;
+}
+.centered { position: absolute; top: 7%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.centered1 {
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.paymentOption{
+  margin-top: -252px;
+  margin-bottom: 100px;
+  margin-right: 28px;
+  margin-left: 0px;
+}
+  .SimpleMediaCard-root-203 {
+    margin: 3px 10px 3px 3px;
+    padding: 8px;
+    flex-grow: 1;
+    max-width: 95%;
+    height: 112px;
+}
+.img2{
+  margin-top: -3px !important;
+  
+}
+.img3{
+  height: auto !important;
+}
+.img31{
+  z-index: -5;
+}
+.img1{
+  margin-top: -2px !important;
+}
+.subscrptionblock1{
+  margin-top:13px !important;
+}
+.card1{
+  margin-left:0px !important;
+  margin-right: 0px !important;
+  margin-top:1px !important;
+}
+.imag-salon-detailes {
+  width: 376px !important;
+  height: 100%;
+  margin-top: -16px;
+}
+ /* .headerSearch {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 50px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  width: 87%;
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+}  */
+.subscription-card {
+  width: 100% !important;
+  margin-left: 0px !important;
+  
+}
+.salonDetailsAddBox{
+  margin-top:-12px !important;
+}
+.saloncard{
+  margin-top: 0px !important;
+}
+.cuttingprice{
+  padding-top:15px !important;
+}
+.totalprice1{
+  text-align: left !important; 
+}
+.totalprice2{
+  border: 1px solid rgb(210, 35, 42);
+ width: 88% !important; 
+  border-radius: 3px;
+  padding: 2px;
+  margin-left: -5px !important; 
+  font-size: 10px;
+}
+  .MuiFormControl-root-203{
+    width: 90% !important;
+  } 
+  .material-icons{
+      margin-left: 0px!important;
+   }
+   
+   
+   .save_check{
+      width: 100% !important;
+   }
+   .service_name{
+     padding-left: 15px !important;
+   }
+   .serviceprice_check1{
+     margin-left: 10px !important;
+   }
+   .serviceprice_check{
+    margin-left: 14px !important;
+  }
+  .subscrptionborder{
+    margin-left: 15px !important;
+    width:90% !important;
+  }
+   .subanner{width: 37.2% !important;}
+   .pricelist{
+    width: 100%;
+   }
+  .MuiTab-root-243{
+    margin-left: 47px !important;
+  }
+  .pricelist{
+    width: 109%!important;
+  }
+      
+  .nav-fixed{
+    width: 100% !important;
+  }
+  .service-conatiner-box{
+      width: 100%;
+      padding-top:23.5% !important;
+  }
+  .line{
+    display: none;
+  }
+  .hide-desktop-view{
+    width:100%;
+    margin-top: -25px;
+  }
+  
+ /* .service-conatiner-box{
+        margin-top:50px !important;
+  }  */
+  .icon_box{
+    padding-left: 4px !important;
+  }
+  .genderF{
+    margin-left: -1px !important;
+  }
+  .gender{
+    padding-left:10px !important;
+  }
+  .select_time_date{
+    margin-left: -5px !important;
+  }
+  .cardsalondetails{
+      height: 125px !important;
+  }
+  .list-item {
+    float: left;
+    list-style: none;
+    width: 16px;
+    border: 1px solid rgb(101, 154, 44);
+    height:  16px;
+    border-radius: 50%;
+    margin-left: 2px;
+    line-height: 16px;
+    text-align: center;
+    background-color: rgb(101, 154, 44);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px;
+}
+.list-item1 {
+  float: left;
+  list-style: none;
+  width: 16px;
+  border: 1px solid rgb(101, 154, 44);
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 2px;
+  line-height: 16px;
+  text-align: center;
+  background-color: rgb(101, 154, 44);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px;
+}
+.list-item3 {
+  float: left;
+  list-style: none;
+  width: 16px;
+  border: 1px solid rgb(101, 154, 44);
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 2px;
+  line-height: 16px;
+  text-align: center;
+  background-color: rgb(101, 154, 44);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px;
+}
+  .RatingBox {
+    background: rgb(101, 154, 44);
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 2px;
+    color: #fff;
+    /* margin-left: -6px; */
+    font-size: 5px;
+    padding: 2px;
+    margin-left: -4px;
+  
+  }
+  .cardsalondetails{
+    padding: 11px;
+    margin-top: -163px;
+    width: 104%;
+  }
+  .widget-svg{
+    width: 14px !important;
+    /* height: 10px !important; */
+    margin-left: 0px;
+  }
+  .rating_box{
+    margin-top:10px;
+  
+  }
+  .reviews{
+    font-size: 5px !important;
+  }
+  .reivew{
+    font-size: 5px;
+    color: rgb(101, 154, 44);
+    margin-top:4px; 
+    float:right;
+  }
+ 
+  .rating{
+    font-size: 9px !important;
+  }
+  .recent{
+    font-size:7px !important;
+  }
+  .vertical{
+    border:0.3px solid #D3D3D3;width:100%;margin-top:9px;
+  }
+  .affiliate-btn {
+    font-size: 10px !important;
+    border-radius: 4px;
+    margin-top: 3px;
+    box-shadow: 2px 2px 2px 1px #D3D3D3;
+    cursor: pointer;
+    width: 62px;
+}
+  .salonimg{
+    width: 100%;
+    height: 116px;
+    padding: 4px;
+    margin-left: -9px;
+  }
+  .ambience{
+    font-size:7px !important;
+  }
+  .commonmargin-top {
+    margin-top: 10px;
+    margin-left: -15px;
+}
+  .appBar{
+    background: '#f1f2f2';
+    margin-top:1px;
+    margin-left:0;
+  }
+  .hide-mobile-view {
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  .commonmargin-top {
+    margin-top: 10px;
+    margin-left: -14px;
+  }
+
+  .servicestittle{   padding-left: 0px !important;
+    padding-right: 0px !important;
+    text-align: -webkit-center;
+    padding-top: 10px;
+    font-size: 12px;
+    
+    }
+  .minimagesflash {
+      width: 6.7em !important;
+  }
+  .divleft {
+      padding-left: 25px;
+  }
+  .header-search-text {
+      float: left;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 50px;
+      white-space: nowrap;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      /* width: 84%; */
+  }
+  .margin-inherit {
+      margin-bottom: 8px;
+      font-size: 11px;
+  }
+  .margin-inherit-s {
+      margin-bottom: 8px;
+      font-size: 11px;
+      text-align: right;
+      padding-right: 17px;
+  }
+  .innerpadding {
+      padding: 25px;
+  }
+  .addres {
+      color: #000;
+      padding-bottom: 0px;
+      line-height: 5px;
+      text-align: right;
+      font-weight: 600;
+      font-size: 10px !important;
+  }
+  .list-review-color {
+      color: #B1B2B4;
+      font-size: 12px;
+  }
+  .service-cartBtn-1 {
+      background-color: #7bc242!important;
+      height: 65px;
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      left: 0%;
+      z-index: 9999;
+  }
+  .service-cartBtn-2 {
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      right: 0%;
+  }
+  .service-details-card {
+      padding: 15px 0px 15px 10px;
+  }
+  .submitReview {
+      width: 100%;
+      position: fixed!important;
+      bottom: 0;
+      left: 0%;
+  }
+  .profile-icon-w {
+      width: 28%;
+  }
+  .flashImg {
+      width: 31%;
+  }
+  .freebieIcon {
+      width: 40px;
+      height: 40px;
+  }
+  .img21{
+    height: 70%;
+  }
+  .subscription-card {
+     
+      margin-left:0px !important;
+       
+  }
+  .paymentOption{
+    margin-top: -60px;
+    margin-right: 0px !important; 
+  }
+  /* .Pay-via {
+      width: 98%!important;
+      bottom: 20%;
+      box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+      padding-left: 13px;
+      max-height: 40px;
+      line-height: 40px;
+      color: #000;
+      font-weight: 700;
+      background-color: #f2f2f3;
+      padding-bottom: 1%;
+      position: fixed;
+      bottom: 52px;
+      box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+  } */
+  
+  .Pay-via {
+    color: #000;
+    width: 97%!important;
+    position: fixed;
+    -webkit-box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+    box-shadow: rgb(176, 176, 176) 0px 0px 8px;
+    padding-left: 13px;
+    margin-left: 0.3%;
+    margin-right: 70px;
+    bottom: 65px;
+    /* right: 21%; */
+    background-color: #f2f2f3;
+    height: 50px;
+    max-height: 60px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+  .home-affilate-card {
+      background: #d3d3d3;
+      position: absolute;
+      height: 114px;
+      width: 95%;
+      opacity: .7;
+      margin: -8px -8px -8px -8px;
+  }
+  .salon-standard {
+      width: 10%;
+      height: 26px;
+      padding-left: 10px;
+  }
+  .time-box {
+      text-align: center;
+      padding: 10% 5% 10% 5%;
+      margin: 5px 10px 5px 10px;
+      cursor: pointer;
+      font-size: 13px;
+  }
+  .affiliate-lock {
+      position: absolute;
+      right: 79px;
+      padding: 5px;
+      font-size: 9px;
+      opacity: 1;
+      color: #000;
+      font-weight: 600;
+  }
+  .home-affiliate-sub {
+      background-color: rgb(254, 198, 64);
+      position: absolute;
+      right: 0%;
+      padding: 5px;
+      font-size: 9px;
+      opacity: 1;
+      color: #000;
+      font-weight: 600;
+  }
+  .salon-details-rating {
+      border: 1px solid rgb(101, 154, 44);
+      width: 17px;
+      height: 14px;
+      line-height: 16px;
+      padding: 2px 6px 5px 4px;
+      background: rgb(101, 154, 44);
+      color: #fff;
+      border-radius: 4px;
+      margin-top: -21px;
+      z-index: 4;
+      position: absolute;
+      left: 47%;
+      text-align: center;
+      font-size: 13px;
+  }
+  
+  .servie-percentage-img {
+      width: 74%;
+      padding-top: 6px;
+      position: static;
+      left: 0px;
+  }
+  .top-margin-common {
+      margin-top: -8px;
+  }
+  .subscript-page-heading {
+      color: #cc802e;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 10px;
+  }
+  .gspprice2 {
+    color: #cc802e;
+    font-size: 18px !important;
+    font-weight: 700;
+   
+  }
+  .feexy{
+    font-size: 11.5px !important;
+  }
+  .feexy img{
+    width: 4% !important;
+  }
+  .subscription-page-1 {
+      margin-top: -15px;
+  }
+  .subscription-page-buy {
+      text-align: -webkit-center;
+      margin-top: 5%;
+      font-size: 15px;
+      padding: 0% 0% 0% 0%;
+      color: rgb(88, 89, 91);
+  }
+  .subscription-page-title {
+      padding: 6% 4% 4% 4%;
+      text-align: -webkit-center;
+      color: rgb(88, 89, 91);
+      font-size: 13px;
+  }
+  .sucription-page-whatsapp {
+      padding-bottom: 5%;
+      padding-left: 13px;
+      padding-top: 4%;
+  }
+  .subscription-page-head-4 {
+      background-color: gainsboro;
+      padding: 3% 0% 3% 0%;
+  }
+   /* .service-conatiner-box {
+      padding-top: 22%;
+  }  */
+  .hide-mobile-view {
+      display: none;
+  }
+  .margin-salon-details {
+      margin-top: -5px;
+  }
+  .freebie-login-btn {
+      position: absolute;
+      z-index: 99;
+      top: 114px;
+      left: 2%;
+      padding: 12px 12px 12px 12px;
+  }
+
+
+
+}
+
+/* .Lowestprice {
+  color: #BCBABA;
+  text-align: -webkit-right;
+} */
+
+#time {
+  color: #D3D3D3;
+  text-align: center;
+  width: 150px;
+}
+
+#date {
+  color: #D3D3D3;
+  text-align: center;
+  width: 150px;
+}
+
+.icon_km {
+  color: #D3D3D3;
+  text-align: right;
+}
+
+.affiliate-btn {
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px 1px #D3D3D3;
+  cursor: pointer;
+ 
+}
+
+.material-icons {
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.open {
+  float: right;
+  color: black;
+  font-weight: 700;
+}
+
+.jyoti {
+  float: left;
+  padding-left: 10px;
+  color: #D3D3D3;
+}
+
+.list-item-sm {
+  margin-left: 10px;
+  position: relative;
+}
+
+ .line {
+  border-left: 1.5px solid #bbc4bb6b;
+  height: 30px;
+  margin-top: 20px;
+ 
+} 
+
+.paper {
+  margin-right: 70px;
+}
+
+.hide-mobile-view {
+  width: 88%;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.ADD {
+  cursor: pointer;
+  border-radius: 4px;
+  width: 50px;
+  padding: 5px;
+  margin-left: -5px;
+  text-align: center;
+}
+
+.Pay-via {
+  width: 100px;
+}
+
+.add {
+  margin-left: right;
+  margin-top: -20px;
+}
+
+.rating {
+  color: #03010170;
+  text-transform: uppercase;
+  /* margin-left:5px;  */
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+.phonenumber{
+  width:92%;
+  border:none;
+  height: 20px;
+  border-bottom: 1px solid  #808080;
+  
+}
+.material-icons{
+  line-height: 0 !important;
+}
+
+.serchbarlocation {
+  width: 97.7%;
+  border: none;
+  -webkit-box-shadow: rgba(159, 154, 154, 0.84) 0px 1px 3px;
+  box-shadow: rgba(51, 51, 51, 0.31) 0px 1px 3px;
+  height: 25px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgba(159, 154, 154, 0.84);
+}
+
+
+.servicestittle{   padding-left: 0px !important;
+  padding-right: 0px !important;
+  text-align: -webkit-center;
+  padding-top: 10px;
+  font-size: 10px;
+
+  }
+
+  .material-icons {
+    font-size: 30px;
+    padding-top: 7px !important;
+}
+.material-iconsserch {
+  padding-top: 0px !important;
+}
+.currentlocaction{
+  height: 45px;
+  border: 1px solid rgb(212, 213, 217);
+  margin-bottom: 10px;
+  padding: 30px;
+}
+
+.MuiBottomNavigationAction-label-219.MuiBottomNavigationAction-selected-216 {
+  font-size: 0.875rem;
+  padding-top: 9px;
+}
+.overview{
+  font-weight: 700;
+  font-size: 16px;
+}
+.overview_content{
+  text-align: justify;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 5px;
+}
