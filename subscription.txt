@@ -357,7 +357,7 @@ return (
  <Grid container>
  {/* <Grid item xs={12}><img src ="https://res.cloudinary.com/dyqcevdpm/image/upload/v1555762078/top-banner_tc4a1x.png" className="imgtopbanner" alt="img"/></Grid> */}
  
- <Grid item xs={12} className="subbanners submain" >
+ <Grid item xs={12} sm={12} md={12} lg={12} className="subbanners submain" >
       <div className="asdf" >
           <h2 className="subenjhead">Subscribe & Enjoy</h2>
           <h2 className="freeser500">Free services worth &#x20B9;500/month</h2>
@@ -384,7 +384,7 @@ return (
  </Grid>
 
 
- <Grid item xs={12} className="imodesec" style={{padding: '0px !Important'}}>
+ <Grid item xs={12} sm={12} md={12} lg={12} className="imodesec" style={{padding: '0px !Important'}}>
  <h2 className="maintn">Why choose Gold SalonPass</h2>
  <Grid container className="subscription-xr">
  <Grid item xs={12} sm={12} md={4} lg={4} className="modulastext">
@@ -617,7 +617,7 @@ return (
       </Link></div>
       
       </Grid> 
- <Grid className="subscription-container" style={{marginTop:'13px'}}>
+ <Grid className="subscription-container" style={{marginTop:'13px',textAlign:'left !important'}}>
  <SalonCardSlider salons={this.state.nearbySalons}/> 
  </Grid>
 </Grid>
