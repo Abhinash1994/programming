@@ -53,9 +53,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* .MuiBottomNavigationAction-selected-218{
-  padding-top:7px;
-} */
 .flashsalebanner {
   position: absolute;
   z-index: 97;
@@ -68,7 +65,11 @@ body {
   /* font-weight: 800; */
   text-transform: uppercase;
 }
-
+.buysubcription{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding:13px 2px 0px 19px;
+}
 .pt-35{padding-top: 35px}
 
 .list-item-sm {
@@ -111,7 +112,12 @@ body {
   margin-top:20px;
 
 }
-
+.subscription-card1 {
+  padding: 15px;
+  margin-top: 10px;
+  width: 95%;
+  margin-left: 14px!important;
+}
 .MuiTab-root-313 {
   min-width: 113px !important;
 }
@@ -124,6 +130,7 @@ body {
   font-weight: 600;
  
 }
+
 .salon_name{
   color:#000;font-weight:600;font-size:23px;overflow:hidden;white-space:nowrap; text-overflow:ellipsis;padding-top:10px;
 }
@@ -248,7 +255,22 @@ body {
   padding: 10px 10px 10px 10px;
   text-align: center;
 }
-
+/* .headerSearch {
+ 
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 50px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  width: 87%;
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+} */
 .more-infopage-box {
   margin-left: 10px;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
@@ -317,9 +339,9 @@ padding-left:0px!important;
   z-index: 9999;
 }
 .subscript-page-heading {
-  color: rgb(185, 141, 0);
+  color: #cc802e;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 10px;
 }
 
@@ -396,12 +418,12 @@ padding-left:0px!important;
   line-height: 50px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  /* width: 84%; */
+   width: auto; 
   white-space: nowrap;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-   /* width: 84%; */
+  
 }
 .MuiPaper-rounded-28{
   margin-left: 0px!important;
@@ -434,8 +456,9 @@ padding-left:0px!important;
 }
 
 .subscription-card {
-  width: 70%;
-  margin-left: 75px !important;
+  /* width: 91%;
+    margin-left: 27px !important; */
+    margin-top: 24%;
 }
 
 .profile-img {
@@ -463,11 +486,42 @@ padding-left:0px!important;
   height: 80px;
   padding-top: 2%;
 }
-
+.subscrptionblock1{
+  margin-top: -151px;
+  margin-bottom: 100px;
+}
+/* .paymentOption{
+  margin-top: -12px;
+  margin-bottom: 100px;
+ 
+} */
+.anglearrow{
+  color:#fff;
+  margin-top: 18px !important;
+  cursor: pointer;
+}
 .linkDecoration {
   text-decoration: none;
   cursor: pointer!important;
   color: #000;
+}
+.containersubscription{
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: -5;
+}
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .imag-salon-detailes {
@@ -490,7 +544,7 @@ padding-left:0px!important;
   background: rgb(101, 154, 44);
   color: #fff;
   border-radius: 4px;
-  margin-top: -21px;
+  margin-top: -16px;
   z-index: 4;
   position: absolute;
   left: 49%;
@@ -826,7 +880,7 @@ padding-bottom: 5px; */
 }
 
 .transparentcont-box {
-  background-color: rgba(80, 74, 74, 0.95);
+  /* background-color: rgba(80, 74, 74, 0.95); */
   position: absolute;
   width: 100%;
   height: 189px;
@@ -926,8 +980,9 @@ video {
 }
 
 .paymenr-option {
-  color: #9c9c9c;
+  color: #000000;
   font-size: 13px;
+  font-weight: 600;
 }
 
 .pay-now2 {
@@ -1196,7 +1251,7 @@ sub {
   padding-left: 13px;
   margin-left: 5.5%;
   margin-right: 70px;
-  bottom: 56px;
+  bottom: 65px;
   right: 21%;
   background-color: #f2f2f3;
   height: 50px;
@@ -1284,6 +1339,7 @@ sub {
     margin-left: -53px!important;
     z-index: -10;
   }
+  
   .Pay-via1 {
     color: #000;
     width: 220% !important;
@@ -1342,12 +1398,31 @@ sub {
       margin-left: -3px;
       margin-top: 8px;
   }
+  .header-search-text {
+    float: left;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 50px;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 @media (min-width:1024px) and (max-width:1200px) {
   .review {
     padding-top: 4px;
     padding-left: 17px;
-    margin-left: 2px;
+    
+  }
+  .paymentOption {
+    margin-top: -13ox !important;
+    
   }
   .SimpleMediaCard-img-204{
     height: 114px !important;
@@ -1420,23 +1495,43 @@ sub {
     padding: 3px 0px;
     width: 39.1% !important;
 }
+.paymentOption {
+  margin-top: -13px !important;
+  margin-bottom: 100px;
+ 
+}
+.header-search-text {
+  float: left;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 50px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 }
 @media  (min-width:615px) and (max-width:768px) {
   .salonName{
-    font-size: 30px !important;
+    font-size: 24px !important;
   }
-  /* .salonadress{
-    font-size: 10px !important;
-  }   */
-  /* .cuttingprice{
-    font-size: 10px !important;
-  } */
+  .salonadress{
+    font-size: 20px !important;
+  }  
+  .cuttingprice{
+    font-size: 12px !important;
+  }
   .saloncard{
     margin-top:20px !important;
   }
   #img_id{
-    height: 110px !important;
+    height: 169px !important;
   }
   .rating1{
     margin-left: -15px !important;
@@ -1444,6 +1539,12 @@ sub {
   .service-conatiner-box {
     padding-top: 11%;
   }
+  .paymentOption {
+    margin-top: -13px !important;
+    margin-bottom: 100px;
+    /* margin-right: 28px;
+    margin-left: 27px; */
+}
   .header-search-text {
     float: left;
     color: rgb(255, 255, 255);
@@ -1452,31 +1553,51 @@ sub {
     line-height: 50px;
     white-space: nowrap;
     -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    width: 62%;
+    text-overflow: ellipsis !important;
+    width: 53% !important;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: hidden !important;
     white-space: nowrap;
     text-overflow: ellipsis;
-    /* width: 84%; */
+    
+  }
+  
+  #img_id {
+    height: 110px !important;
   }
   .salonName{
-    font-size: 15px !important;
+    font-size: 13px !important;
   }
- 
+  .salonadress{
+    font-size: 12px !important;
+  }
+  .saloncard{
+    margin-top: -3px !important;
+  }
+
 }
 @media  (min-width:482px) and (max-width:768px) {
   .SimpleMediaCard-img-204{
-    height: 111px !important;
+    height: 0 !important;
   }
-  .review {
-    font-size: 8px;
-    color: rgb(101, 154, 44);
-    margin-top: 19px !important;
-    float: right;
-    /* margin-top: 9px; */
-    /* padding-left: 1px; */
-    margin-right: -38px;
+ 
+.footerhomebtn{
+  line-height:3 !important;
+}
+.subscrptionblock1{
+  margin-top: -152px;
+  margin-bottom: 100px;
+}
+.subscription-card {
+  width: 100%;
+    margin-left: 0px !important;
+   
+}
+.paymentOption {
+  margin-left: 0px;
+  margin-top: -19px !important;
+  /* margin-right: 28px;
+  margin-left: 27px; */
 }
   .subanner {
     font-size: 8px;
@@ -1498,7 +1619,7 @@ sub {
   /* margin-left: 0px; */
   font-size: 10px;
   float: right;
-  margin-right: -6px !important;
+  margin-right: 0px !important;
 }
 .sliderRatingBox {
   background: rgb(101, 154, 44);
@@ -1515,10 +1636,6 @@ sub {
 }
 
 }
-
-/* @media  (min-width:300px) and (max-width:413px) {} */
-
-
 
 @media (max-width:1024px) and (max-width:768px) {
   .genderF{
@@ -1627,16 +1744,18 @@ sub {
   }
   .hide-mobile-view {
     display: none;
-}
+  }
 }
 
 @media (min-width:482px) and (max-width:768px) {
-  
+  .footerhomebtn{
+    padding-top:15px !important;
+  }
   .service-conatiner-box{
     padding-top:55px;
 }
   .saloncard{
-    margin-top: -5px !important;
+    margin-top: -3px !important;
   }
   .genderF{
     margin-left: 8px !important;
@@ -1792,37 +1911,6 @@ sub {
   }
  
 
-  /* .Pay-via {
-      width: 98%!important;
-      bottom: 20%;
-      box-shadow: rgb(176, 176, 176) 0px 0px 8px;
-      padding-left: 13px;
-      max-height: 40px;
-      line-height: 40px;
-      color: #000;
-      font-weight: 700;
-      background-color: #f2f2f3;
-      padding-bottom: 1%;
-      position: fixed;
-      bottom: 52px;
-      box-shadow: rgb(176, 176, 176) 0px 0px 8px;
-  } */
-  /* .Pay-via {
-    width: 98%!important;
-    bottom: 20%;
-    -webkit-box-shadow: rgb(176, 176, 176) 0px 0px 8px;
-    box-shadow: rgb(176, 176, 176) 0px 0px 8px;
-    padding-left: 13px;
-    max-height: 40px;
-    line-height: 40px;
-    color: #000;
-    font-weight: 700;
-    background-color: #f2f2f3;
-    padding-bottom: 1%;
-    position: fixed;
-    bottom: 63px;
-    box-shadow: rgb(176, 176, 176) 0px 0px 8px;
-} */
 .Pay-via {
   color: #000;
   width: 97%!important;
@@ -1832,7 +1920,7 @@ sub {
   /* padding-left: 13px; */
   /* margin-left: 5.5%; */
   /* margin-right: 70px; */
-  bottom: 56px;
+  bottom: 65px;
   right: 2%;
   background-color: #f2f2f3;
   height: 50px;
@@ -1863,12 +1951,12 @@ sub {
       white-space: nowrap;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
-      width: 63%;
+      width: 86%;
       white-space: nowrap;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      /* width: 84%; */
+     
   }
   .service-cartBtn-2 {
       width: 100%;
@@ -1936,7 +2024,7 @@ sub {
   color: rgb(101, 154, 44);
   margin-top:4px; 
   float:right;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 .slidereview{
   font-size: 8px;
@@ -1959,11 +2047,19 @@ sub {
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
     background-color: #fff !important;
 }
+.subscription-card {
+  width: 95%;
+  margin-left: 0px !important;
+  margin-top: -17px !important;
 }
+.footerhomebtn{
+  padding-top:15px !important;
+}
+
+}
+
 @media (min-width:320px) and (max-width:480px) {
-  .SimpleMediaCard-img-204{
-    height: 114px !important;
-  } 
+  
   .SimpleModal-paper-351 {
     width: 312px;
     padding: 32px;
@@ -1971,9 +2067,26 @@ sub {
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
     background-color: #fff !important;
 }
-  /* .carousel1{
-    margin-top:-24px !important;
-  } */
+.subscription-card1 {
+  width: 100%;
+}
+.subs_salon{
+  font-size: 26px !important;
+}
+.centered { position: absolute; top: 7%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.centered1 {
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.paymentOption {
+  margin-left: 0px;
+  margin-top: -19px !important;
+  display: block !important;
+}
   .SimpleMediaCard-root-203 {
     margin: 3px 10px 3px 3px;
     padding: 8px;
@@ -1981,11 +2094,70 @@ sub {
     max-width: 95%;
     height: 112px;
 }
+.img2{
+  margin-top: -3px !important;
+  
+}
+.img3{
+  height: auto !important;
+}
+.img31{
+  z-index: -5;
+}
+.img1{
+  margin-top: -2px !important;
+}
+.subscrptionblock1{
+  margin-top:13px !important;
+}
+.card1{
+  margin-left:0px !important;
+  margin-right: 0px !important;
+  margin-top:1px !important;
+}
+.imag-salon-detailes {
+  width: 376px !important;
+  height: 100%;
+  margin-top: -16px;
+}
+ /* .headerSearch {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 50px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  width: 87%;
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+}  */
+.subscription-card {
+  width: 100% !important;
+  margin-left: 0px !important;
+  
+}
 .salonDetailsAddBox{
   margin-top:-12px !important;
 }
 .saloncard{
-  margin-top: -10px !important;
+  margin-top: 0px !important;
+}
+.cuttingprice{
+  padding-top:15px !important;
+}
+.totalprice1{
+  text-align: left !important; 
+}
+.totalprice2{
+  border: 1px solid rgb(210, 35, 42);
+ width: 88% !important; 
+  border-radius: 3px;
+  padding: 2px;
+  margin-left: -5px !important; 
+  font-size: 10px;
 }
   .MuiFormControl-root-203{
     width: 90% !important;
@@ -1993,11 +2165,8 @@ sub {
   .material-icons{
       margin-left: 0px!important;
    }
-  
-   .MuiGrid-container-58{
-    background: rgba(241, 242, 242, 0) !important;
-    margin-top: 10px;
-   }
+   
+   
    .save_check{
       width: 100% !important;
    }
@@ -2010,11 +2179,10 @@ sub {
    .serviceprice_check{
     margin-left: 14px !important;
   }
-  .MuiGrid-container-58{
-    margin-left: 0px !important;
-
+  .subscrptionborder{
+    margin-left: 15px !important;
+    width:90% !important;
   }
-  
    .subanner{width: 37.2% !important;}
    .pricelist{
     width: 100%;
@@ -2208,12 +2376,12 @@ sub {
       white-space: nowrap;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
-      width: 78%;
+      width: 80%;
       white-space: nowrap;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      padding-left: 8px;
+      /* width: 84%; */
   }
   .margin-inherit {
       margin-bottom: 8px;
@@ -2274,9 +2442,17 @@ sub {
       width: 40px;
       height: 40px;
   }
+  .img21{
+    height: 70%;
+  }
   .subscription-card {
-      width: 95%;
+     
       margin-left:0px !important;
+       
+  }
+  .paymentOption{
+    margin-top: -60px;
+    margin-right: 0px !important; 
   }
   /* .Pay-via {
       width: 98%!important;
@@ -2303,7 +2479,7 @@ sub {
     padding-left: 13px;
     margin-left: 0.3%;
     margin-right: 70px;
-    bottom: 56px;
+    bottom: 65px;
     /* right: 21%; */
     background-color: #f2f2f3;
     height: 50px;
@@ -2359,17 +2535,14 @@ sub {
       background: rgb(101, 154, 44);
       color: #fff;
       border-radius: 4px;
-      margin-top: -16px;
+      margin-top: -21px;
       z-index: 4;
       position: absolute;
       left: 47%;
       text-align: center;
       font-size: 13px;
   }
-  .MuiGrid-spacing-xs-8-80 > .MuiGrid-item-59 {
-      padding: 4px 0px 4px 4px!important;
-      height: 135px;
-  }
+  
   .servie-percentage-img {
       width: 74%;
       padding-top: 6px;
@@ -2380,10 +2553,22 @@ sub {
       margin-top: -8px;
   }
   .subscript-page-heading {
-      color: rgb(185, 141, 0);
-      font-size: 12px;
+      color: #cc802e;
+      font-size: 10px;
       font-weight: 700;
       padding: 10px;
+  }
+  .gspprice2 {
+    color: #cc802e;
+    font-size: 18px !important;
+    font-weight: 700;
+   
+  }
+  .feexy{
+    font-size: 11.5px !important;
+  }
+  .feexy img{
+    width: 4% !important;
   }
   .subscription-page-1 {
       margin-top: -15px;
@@ -2527,16 +2712,6 @@ sub {
   font-weight: 700;
 }
 
-
-/* .AllStar{
-  margin-left: 5px;
-
-} */
-
-.AllStar .material-icons {
-  font-size: 12px;
-  /* margin-left: 3px; */
-}
 
 .phonenumber{
   width:92%;
