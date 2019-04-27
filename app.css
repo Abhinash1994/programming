@@ -45,6 +45,23 @@
   font-size: 12px;
   font-weight: 700;
   }
+  /* ---form design-- */
+  .formtypexd .MuiInputLabel-shrink-235 {
+    transform: translate(0, 1.5px) scale(0.75);
+    transform-origin: top left;
+    background-color: #e10e0e!important;
+    margin-top: -8px !important;
+    margin-left: 6px !important;
+}
+
+.formtypexd .MuiFormControl-marginNormal-229 {
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
+    border: 1px solid #fff !important;
+}
+  /* --- form disign-- close-- */
+
+
   .subscription-xr {
   max-Width: 753px;
   margin: 0 auto;
@@ -191,6 +208,9 @@
   padding-top: 4%;
   
   }
+  .pricedeskt{
+    margin-left: 13% !important;
+  }
   .scte{
   font-size: 18px;
   letter-spacing: 1.1px;
@@ -211,6 +231,10 @@
   .minmain{
   margin-right: 5%;
   }
+  .asdf Button{
+      background: #b50101 !important;
+      color:#fff;
+  }
   .vl {
   border-left: 2px solid #626562;
   height: 58px;
@@ -221,6 +245,32 @@
   height: 53%;
   margin-top: 25px
   }
+
+
+ /* ---formtype start-- */
+ .formtypexd .MuiInputLabel-shrink-235 {
+  transform: translate(0, 1.5px) scale(0.75);
+  transform-origin: top left;
+  /* border: 1px solid; */
+  background-color: #e10e0e !important;
+  /* color: #000 !important; */
+  margin-top: -8px !important;
+  margin-left: 6px !important;
+}
+
+.formtypexd .MuiFormControl-marginNormal-229 {
+  margin-top: 21px !important;
+  margin-bottom: 8px;
+  border: 1px solid #fff !important;
+  border-radius: 4px;
+}
+.formtypexd input[type=text]{
+  padding-left: 4px;
+}
+.formtypexd .nametype{
+  padding-left: 7px !important;
+}
+  /* --- close formtype--- */
   .colred{
   height: 10px;
   background: #d20606;
@@ -231,10 +281,69 @@
   letter-spacing: 1px;
   font-size: 16px;
   }
+  .bodypayout{
+    cursor: pointer;
+  }
   .bodypayout_form h4{
     font-weight: 550;
     margin-top: -13px;
   }
+
+/* ---search box--- */
+.searchboxse{
+  text-align: -webkit-center; 
+}
+.subSearch{
+  font-size: 18px;
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 12px !important;
+  color: #cd0505;
+}
+.searchicon{
+  font-size: 15px;
+  position: absolute;
+  /* background: #fd022fa6; */
+  background: #fd022fe8;
+  color: #fff;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 25px;
+  width: 50px;
+  padding: 4px;
+  margin-left: -57px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.searchicon i{
+  padding-left: 14px;
+  font-size: 21px;
+}
+#searchboxpass{
+  display: block;
+    width: 51%;
+    padding: 6px 12px;
+    display: inline;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    padding-left: 28px;
+    box-shadow: -1px 1px #baaeae;
+}
+/* ---close box--- */
+
+
   .left_side{
   border-top: 1.5px solid #7a757566;
   border-left: 1.5px solid #7a757566;
@@ -317,6 +426,12 @@
   .iconmessge{
   padding-bottom: 16px;
   }
+  /* .goldpassew{
+    padding-bottom: 15px !important;
+  } */
+  .MuiGrid-grid-xs-8-94{
+    padding-bottom: 11px !important;
+  }
   .moneycomn{
   height: 26%;
   }
@@ -366,7 +481,7 @@
   font-family: 'Roboto', sans-serif;
   padding-left: 20%;
   padding-top: 10px;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .freeser500{
   font-size: 39px;
@@ -374,7 +489,7 @@
   color: #e73934;
   padding-left: 11%;
   line-height: 1.9;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .payoutblock{
   margin-top: 5% !important;
@@ -387,18 +502,17 @@
   color: #fff;
   padding: 20px !important;
   font-family: lato;
-  
   }
   .goldpasswe .passnmae{
   font-size: 24px;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   padding-left: 11%;
   }
   
   .goldpasswe .servicesd{
   padding-left: 47px;
   font-size: 24px; 
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   }
   .subscription-path {
   max-Width: 571px;
@@ -406,13 +520,13 @@
   position: relative;
   }
   .bodypayout .mngthshow{
-  color: #fff;
-  font-family: lato;
-  padding-left: 55px;
-  font-size: 20px;
-  padding-top: 10%;
-  font-weight: 50;
-  padding-bottom: 10px !important;
+    color: #fff;
+    font-family: lato;
+    padding-left: 47px;
+    font-size: 21px;
+    padding-top: 10%;
+    font-weight: 50;
+    padding-bottom: 16px !important;
   }
   .bodypayout{
   margin-top: 7%;
@@ -432,32 +546,30 @@
   }
   .bodypayout_form .formtypexd{
   height: auto;
-  background: #b50101;
+  background: #e10e0e;
   text-align: -webkit-left;
   margin-top: 5%;
   }
   .nametype{
-  margin-left: 84px !important;
+    margin-left: 55px !important;
+    border-bottom:1px solid white !important;
   }
   .nametype label{
   color:#fff !important;
+  padding-left: 10px;
   }
-  .submitssd{
-  background: #b50101;
-  border: 1px solid #fff;
+
+.submitssd{
   color: #fff;
-  font-size: 16px;
-  padding: 4px;
-  margin-left: 25px;
-  font-family: sans-serif;
-  pointer: cursor;
-  cursor: pointer;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 15%;
-  }
+  background-color: #f20303 !important;
+  margin-left: 57px !important;
+  margin-top: 27px !important;
+  padding-left: 22px !important;
+  padding-right: 22px !important;
+}
+  
   .submitssd:hover{
-    background: #ff0000;
+    background: #d21e5d;
   }
   #outlined-name-input{
   color: #fff !important;
@@ -466,15 +578,17 @@
   padding-bottom: 4% !important;
   }
   .bodypayout .subsbuy{
-  padding: 9px;
-  border: none;
-  background: #ff8df6;
-  font-size: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 6px;
-  font-family: inherit;
-  margin-top: 20px;
+    padding: 6px;
+    border: none;
+    background: #ff8df6;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    font-family: inherit;
+    margin-top: 26px !important;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .bodypayout .price{
   text-align: center;
@@ -506,7 +620,7 @@
   font-weight: 500;
   padding-left: 28%;
   margin-top: -13px;
-  font-family: anton;
+  /* font-family: anton; */
   }
   
   .subsnewbtn {
@@ -532,6 +646,7 @@
     color: rgb(255, 255, 255);
     padding-left: 37%;
     padding-bottom: 10px;
+    font-size: 12px; 
   }
   .icomainde{
   padding-top: 20px;
@@ -573,6 +688,8 @@
   width: 100%;
   padding: 19px !important;
   padding-left: 24px !important;
+  text-transform: none !important; 
+  padding-bottom: 6px !important;
   }
   .dsa img{
   padding-top: 25px;
@@ -1110,6 +1227,9 @@
   .genderSelect {
   margin-left: 99px !important;
   }
+  #searchboxpass {
+    width: 66%;
+  }
   .appbarDeals {
   margin-left: 39px;
   width: 92.2% !important;
@@ -1130,7 +1250,7 @@
   .goldpasswe .servicesd {
   padding-left: 35px;
   font-size: 22px;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   }
   .goldpasswe .passnmae {
   font-size: 22px;
@@ -1394,6 +1514,10 @@
   .genderSelect {
   margin-left: 50px !important;
   }
+  #searchboxpass {
+   
+    width: 86%;
+  }
   .payoutblock {
   margin-top: 5% !important;
   margin-bottom: 5% !important;
@@ -1422,7 +1546,7 @@
   font-family: 'Roboto', sans-serif;
   padding-left: 15%;
   padding-top: 10px;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .freeser500 {
   font-size: 30px;
@@ -1430,7 +1554,7 @@
   color: #e73934;
   padding-left: 0%;
   line-height: 1.9;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .freeser12 {
   font-family: 'Lato', sans-serif;
@@ -1680,6 +1804,9 @@
   .female1{
   margin-left: -25px;
   }
+  #searchboxpass {
+    width: 90%;
+  }
   .asdfmobile{
   display: none;
   }
@@ -1727,14 +1854,15 @@
   padding-bottom: 7px;
 }
 .mobilepayout .mobilebuy{
-  padding: 9px;
+  padding: 5px;
   border: none;
   background: #ff8df6;
   font-size: 11px !important;
   cursor: pointer;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 4px;
   font-family: inherit;
+  margin-top: 8px;
 }
 
 
@@ -1763,7 +1891,7 @@
   color: #EC21EC;
   font-family: 'Roboto', sans-serif;
   padding-left: 10%;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .freeser500 {
   font-size: 20px;
@@ -1771,7 +1899,7 @@
   color: #e73934;
   padding-left: 0px !important;
   line-height: 1.9;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .freeser12 {
   font-family: 'Lato', sans-serif;
@@ -1780,7 +1908,7 @@
   font-weight: 500;
   padding-left: 16%;
   margin-top: -5px;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .subsnewbtn {
   padding-top: 10px;
@@ -2224,18 +2352,66 @@
   
   }
   
+
+  @media (min-width:414px) and (max-width:480px) {
+    #searchboxpass {
+      width: 88% !important;
+    }
+    .nametype {
+      margin-left: 84px !important;
+      margin-top: -7px !important;
+    }
+    .dsa p {
+      color: #fff;
+      padding-top: 6%;
+      padding-left: 41% !important;
+      line-height: 1.3;
+      padding-bottom: 25px;
+    }
+  }
+
+ 
+@media (min-width:320px) and (max-width:400px) {
+  .nametype {
+    margin-left: 84px !important;
+  }
+}
+
+
+
   @media (min-width:320px) and (max-width:480px) {
   /* .subasalo {
   padding-bottom: 4% !important;
   padding: 15px !important;
  } */
+
+ /* ---form design-- */
+ .formtypexd .MuiInputLabel-shrink-235 {
+  transform: translate(0, 1.5px) scale(0.75);
+  transform-origin: top left;
+  background-color: #e10e0e!important;
+  margin-top: -8px !important;
+  margin-left: 6px !important;
+}
+
+.formtypexd .MuiFormControl-marginNormal-229 {
+  margin-top: 21px !important;
+  margin-bottom: 8px !important;
+  border: 1px solid #fff !important;
+}
+/* --- form disign-- close-- */
+
+
  .subasalo{
    padding:15px !important; 
  }
+ #searchboxpass {
+  width: 80%;
+}
+
  .nametype label {
   color: #fff !important;
   font-size: 12px;
-  padding-top: 8px;
 }
 .bodypayout_form h4{
   font-size: 11px;
@@ -2254,13 +2430,15 @@
   margin-right: 24px;
  }
  .dsa p {
-  color: #fff;
-  padding-top: 34%;
-  text-align: left;
-  padding-left: 37px;
+  color: #fff; 
+  padding-top: 8%;
+  padding-left: 41% !important;
   line-height: 1.3;
   padding-bottom: 25px;
 }
+/* .nametype {
+  margin-left: 45px !important;
+} */
  .innervar {
   color: #000000;
   font-family: lato;
@@ -2289,7 +2467,7 @@
   padding-bottom: 7px;
 }
 .mobilepayout .mobilebuy{
-  padding: 9px;
+  padding: 5px;
   border: none;
   background: #ff8df6;
   font-size: 11px !important;
@@ -2297,6 +2475,14 @@
   font-weight: bold;
   border-radius: 6px;
   font-family: inherit;
+  margin-top: 8px;
+}
+.maintn {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-align: -webkit-center;
+  color: #000;
+  font-size: 17px;
 }
  .helloworld{
   padding: 10px;
@@ -2331,17 +2517,17 @@
   -webkit-transform-origin: center top;
   -ms-transform-origin: center top;
   transform-origin: center top;
-  height: 97px;
+  height: 130px;
   margin-top: -8px !important;
   }
   .subenjhead {
-  font-size: 10px;
+  font-size: 11px;
   /* text-align: center; */
   color: #EC21EC;
   font-family: 'Roboto', sans-serif;
   padding-left: 20%;
   padding-top: 10px;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .submitssd {
   background: #b50101;
@@ -2357,7 +2543,7 @@
   padding-right: 20px;
   margin-top: 4%;
   margin-top: 10px !important;
-  margin-left: 32%;
+  margin-left: 38% !important;
   }
   .goldpassew h4{
     font-size: 12px;
@@ -2377,14 +2563,15 @@
   }
   .asdfmobile{
   display: block !important;
+  padding-top: 5%;
   }
   .asdfmobile .freeser500 {
-  font-size: 10px;
+  font-size: 11px;
   font-family: 'Roboto', sans-serif;
   color: #e73934;
   /* padding-left: 9%; */
   line-height: 1.9;
-  font-family: anton;
+  /* font-family: anton; */
   }
   .mobilewef {
   font-size: 20px !important;
@@ -2399,15 +2586,16 @@
   padding: 10px !important;
   padding-left: 24px !important;
   display: block;
+  padding-bottom: 0px !important;
   }
   .asdfmobile .freeser12 {
   font-family: 'Lato', sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   color: #e73934;
   font-weight: 500;
   padding-left: 24%;
   margin-top: 0px !important; 
-  font-family: anton;
+  /* font-family: anton; */
   }
   .asdfmobile .subsnewbtn {
   padding-top: 7px !important;

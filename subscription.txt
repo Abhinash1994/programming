@@ -53,11 +53,25 @@ class Subscription extends Component {
  this.handleChange2 = this.handleChange2.bind(this);
  this.submitForm = this.submitForm.bind(this);
  this.loadNearBySalons = this.loadNearBySalons.bind(this);
+ this.handleSubcribe = this.handleSubcribe.bind(this);
+ this.handleSubcribeMobile = this.handleSubcribeMobile.bind(this);
  this.detectCurrentLocation = this.detectCurrentLocation.bind(this);
  this.handleChangeCoupon = this.handleChangeCoupon.bind(this);
  this.detectCurrentLocation();
  }
  
+ handleSubcribe(){
+   window.scroll({
+      top: 550,
+      behavior: 'smooth'
+    });
+ }
+ handleSubcribeMobile(){
+   window.scroll({
+      top: 400,
+      behavior: 'smooth'
+    });
+ }
  formValidate = () =>{
  let nameError = "";
  let phoneError = "";
@@ -354,7 +368,7 @@ render() {
 
 return (
 <React.Fragment>
- <Grid container>
+ <Grid container style={{overflow:'hidden',marginTop:'-7px'}}>
  {/* <Grid item xs={12}><img src ="https://res.cloudinary.com/dyqcevdpm/image/upload/v1555762078/top-banner_tc4a1x.png" className="imgtopbanner" alt="img"/></Grid> */}
  
  <Grid item xs={12} sm={12} md={12} lg={12} className="subbanners submain" >
@@ -362,9 +376,9 @@ return (
           <h2 className="subenjhead">Subscribe & Enjoy</h2>
           <h2 className="freeser500">Free services worth &#x20B9;500/month</h2>
           <h2 className="freeser12">for 12 months</h2>
-
+       
           <div  className="subsnewbtn">
-          <Button variant="contained" size="medium" color="primary">
+          <Button variant="contained" size="medium" onClick={this.handleSubcribe}>
           Subscribe Now </Button>
           </div>
            
@@ -378,7 +392,7 @@ return (
               <div className="subsnewbtn">
               {/* <Button className="btnsubse" variant="contained" size="small" color="primary">
               Subscribe Now </Button> */}
-              <button type="button" className="btn btn-danger btnsubse">Subscribe Now</button>
+              <button type="button" className="btn btn-danger btnsubse" onClick={this.handleSubcribeMobile}>Subscribe Now</button>
               </div>
         </div>
  </Grid>
@@ -416,17 +430,20 @@ return (
  if(i==0){
  return <Grid key={i}>
  <Grid item xs={12} sm={12} md={12} lg={12} >
-    <Paper className="bodypayout"> 
-            <Grid container spacing={16}>
+    <Paper className="bodypayout"  onClick={() => ins.buySubscription(a)}> 
+            <Grid container spacing={16} >
                 <Grid item xs={6} sm={6} md={6} lg={8} className="goldpasswe">
                 <h4 className="passnmae">Gold Salon Pass</h4>
                 <h5 className="mngthshow">12 Months</h5>
-                <h4 className="servicesd">&#x20B9; 500/Month Free Services</h4>
+                <h4 className="servicesd">&#x20B9;500/Month Free Services</h4>
                 </Grid>
             <Grid item xs={6} sm={6} md={6} lg={4} className="price">
-                <div className="pricwewe">&#x20B9; 1699</div>
+                <div className="pricwewe">&#x20B9; {a.amount}</div>
                 <br/>
-                 <button type="button" className="subsbuy btn-lg" onClick={() => ins.buySubscription(a)}>Buy Now</button>
+                 <button type="button" className="subsbuy btn-lg">Buy Now</button>
+                  {/* <Button className="subsbuy btn-lg" variant="contained" size="medium" >
+                        Buy Now
+                  </Button> */}
                 </Grid>
         </Grid>
     </Paper>
@@ -440,11 +457,11 @@ return (
                     <Grid items xs={8}>
                          <h5 className="goldpassweas">Gold Salon Pass</h5>
                             <h6 className="msns">12 Months</h6>
-                         <h5 className="goldpassweas">&#x20B9; 500/Month Free Services</h5>
+                         <h5 className="goldpassweas">&#x20B9;500/Month Free Services</h5>
                     </Grid>
                     <Grid items xs={4} style={{textAlign:'right'}}>
-                        <h4 className="goldpassweas">&#x20B9; 1699</h4><br></br>
-                        <button type="button" className="mobilebuy btn-lg" onClick={() => ins.buySubscription(a)}>Buy Now</button>
+                        <h4 className="goldpassweas">&#x20B9; {a.amount}</h4><br></br>
+                        <button type="button" className="mobilebuy btn-sm" onClick={() => ins.buySubscription(a)}>Buy Now</button>
                          
                     </Grid>
                </Grid>         
@@ -526,10 +543,10 @@ return (
  </Paper>
  <Button className="mobilewef" onClick={() => ins.paymentModal()}>
  <Grid container>
- <Grid item xs={8} style={{textAlign:'left'}}>
+ <Grid item xs={8} lg={10} style={{textAlign:'left'}}>
  <h6>Click to Pay</h6>
  </Grid>
- <Grid item xs={4} style={{textAlign:'right',}}>&#8377; {this.state.amount}</Grid>
+ <Grid item xs={4} lg={2}  >&#8377; {this.state.amount}</Grid>
  </Grid>
  </Button>
 {/* --desktop view payment option-- */}
@@ -559,7 +576,7 @@ return (
  <Grid container>
  
  <Grid item xs={6}>
- <TextField id="input-with-icon-grid2" label="Apply Coupon Code Here" value={ins.state.coupon} onChange={ins.handleChangeCoupon('coupon')} placeholder=" Enter your Coupon Code" style={{width:'92%'}}/>
+ <TextField id="input-with-icon-grid2" label="Apply Coupon Code Here" value={ins.state.coupon} onChange={ins.handleChangeCoupon('coupon')}  style={{width:'92%'}}/>
  </Grid>
  <Grid item xs={2}></Grid>
  <Grid item xs={2}></Grid>
@@ -593,7 +610,7 @@ return (
  <Grid item xs={8} style={{textAlign:'left'}}>
  Click to Pay
  </Grid>
- <Grid item xs={2} style={{textAlign:'right',}}>&#8377; 1699</Grid>
+ <Grid item xs={2} className="pricedeskt" style={{textAlign:'right'}}>&#8377; {this.state.amount}</Grid>
  </Grid>
  </Button>
  </Grid>
@@ -609,15 +626,30 @@ return (
 
  <Grid container className="imodesec45 " style={{marginTop:'13px'}}>
       <Grid item xs={12} className="helloworld" style={{padding: '0px !Important'}}>
-      {/* <h2 className="maintn">Salons where you can use subscripton</h2> */}
-         <Grid item xs={12}>
-         <div className="headerSearch" justify='center' style={{font:'16px', fontWeight : '700', textAlign:'-webkit-center', padding: '10px',color:'rgb(29, 26, 26)'}}> Salons near {this.state.locationName} <Link to={"/location-search?ref=sub"} className="linkDecoration"><i className="material-icons" style={{fontSize:'20px',paddingLeft:'10px',paddingRight:'10px'}}>
-         search
-         </i>
-      </Link></div>
-      
-      </Grid> 
- <Grid className="subscription-container" style={{marginTop:'13px',textAlign:'left !important'}}>
+      <h2 className="maintn">Salons where you can use Subscripton</h2>
+         {/* <Grid item xs={12}>
+            <div className="headerSearch" justify='center' style={{font:'16px', fontWeight : '700', textAlign:'-webkit-center', padding: '10px',color:'rgb(29, 26, 26)'}}> Salons near {this.state.locationName} <Link to={"/location-search?ref=sub"} className="linkDecoration"><i className="material-icons" style={{fontSize:'20px',paddingLeft:'10px',paddingRight:'10px'}}>
+            search
+            </i>
+         </Link></div>
+      </Grid>  */}
+      <Grid item xs={12} sm={12} md={10} lg={12} style={{textAlign:"center"}}>
+      <Link to={"/location-search?ref=sub"} className="linkDecoration">
+      <div class="searchboxse">
+             <i style={{fontSize:'15px'}} className="subSearch material-icons">
+                        gps_fixed
+               </i>
+               <input type="text" class="form-control" id="searchboxpass" value={this.state.locationName}/>
+               <div className="searchicon">
+                  <i class="material-icons ">
+                     search
+                  </i> 
+               </div>
+         </div>
+      </Link>
+      </Grid>
+     
+ <Grid className="subscription-container" style={{marginTop:'13px',textAlign:'-webkit-left'}}>
  <SalonCardSlider salons={this.state.nearbySalons}/> 
  </Grid>
 </Grid>
@@ -632,37 +664,46 @@ return (
  <div className="formtypexd">
  <Grid container>
  <Grid item xs={12} sm ={4} lg={4} md={4} xl={4}>
+   <form noValidate autoComplete="off"> 
+       
         <TextField
         id="outlined-name-input"
         label="Name"
         className="nametype"
         type="text"
         name="name"
-        autoComplete="name"
         margin="normal"
         variant="outlined"
         value={this.state.name}
         onChange={this.handleChange2('name')}
- />
+      />
     <div className="required" >{this.state.nameError}</div>
+    </form>
  </Grid>
  <Grid item xs={12} sm ={4} lg={4} md={4} xl={4}>
- <TextField
- id="outlined-name-input"
- label="Phone Number"
- className="nametype"
- type="number"
- name="name"
- autoComplete="name"
- margin="normal"
- variant="outlined"
- value={this.state.phoneNumber} 
- onChange={this.handleChange2('phoneNumber')}
- />
+ <form noValidate autoComplete="off"> 
+     
+         <TextField
+            id="outlined-name-input"
+            label="Phone Number"
+            className="nametype"
+            type="text"
+            name="name"
+            margin="normal"
+            variant="outlined"
+            value={this.state.phoneNumber} 
+            onChange={this.handleChange2('phoneNumber')}
+         />
+        
   <div className="required" >{this.state.phoneError}</div>
+  </form>
  </Grid>
  <Grid item xs={12} sm ={4} lg={4} md={4} xl={4}>
- <button type="submit" className="submitssd" onClick={this.submitForm}><span className="suwefr">Submit</span></button>
+ {/* <button type="submit" className="submitssd" onClick={this.submitForm}><span className="suwefr">Submit</span></button> */}
+
+ <Button className="submitssd" variant="contained" color="secondary" onClick={this.submitForm}>
+   Submit
+</Button>
  </Grid>
  </Grid>
  
@@ -686,7 +727,7 @@ return (
 
 
 <Grid item xs={12} className="subasalo" style={{padding: '0px !Important'}}>
- <h2 className="maintn">How to use your salonpass</h2>
+ <h2 className="maintn">How to use your SalonPass</h2>
  <Grid container className="subscription-container" spacing={24}>
  <Grid item xs={12} sm={6} md={4} lg={4} className="modulastext">
  <Paper className="dsa">
