@@ -1,22 +1,21 @@
-public class UnorderedLinearSearch {
+import java.util.*;
 
-    public static void main(String args[]){
-        System.out.println("UnorderedLinearSearch is alvie.");
+class linearsearch{
+	public static void main(String[] arg)
+	{
+		int a[]={10,3,6,23,44};
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter search item: ");
 
-        int arr[]= {4, 1, 3, 7, 2, 9};
-        System.out.println("search item: "+ search(arr, 7));
+		int item=sc.nextInt();
 
+		for(int i=0;i<=a.length-1;i++)
+		{
+			if(a[i]==item){
+				System.out.println("search element : "+i+"indexof");
+			}
+		}
 
-    }
-
-    private static int search(int arr[], int item){
-        int size= arr.length;
-        for(int i=0; i<size; i++){
-            if(arr[i]== item){
-                return item;
-            }
-        }
-        return -1;
-    }
-
+	}
 }
